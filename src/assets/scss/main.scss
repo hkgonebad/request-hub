@@ -1,0 +1,9 @@
+// Bootstrap Variables Override
+@import 'layout/variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Other Imports
+@import 'layout/default';
+@import 'layout/header';
+@import 'layout/footer';
