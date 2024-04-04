@@ -1,14 +1,13 @@
-import React from "react";
 import { useRouteError, isRouteErrorResponse } from "react-router-dom";
 
 const ErrorPage = () => {
   // you don't need to explicitly set error to `unknown`
-  const error = useRouteError();
+  const error: unknown = useRouteError();
   let errorMessage;
 
   if (isRouteErrorResponse(error)) {
     // error is type `ErrorResponse`
-    errorMessage = error.error?.message || error.statusText;
+    errorMessage = error.statusText;
   } else if (error instanceof Error) {
     errorMessage = error.message;
   } else if (typeof error === "string") {
