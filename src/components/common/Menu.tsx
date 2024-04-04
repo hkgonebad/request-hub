@@ -7,7 +7,7 @@ const Menu: React.FC = () => {
   return (
     <Nav className="justify-content-center" activeKey="/home">
       <Nav.Item>
-        <NavLink to="/home" className="nav-link">
+        <NavLink to="/existing-forms" className="nav-link">
           Existing Forms
         </NavLink>
       </Nav.Item>

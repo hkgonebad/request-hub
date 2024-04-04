@@ -1,14 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Layouts
-import AuthLayout from "../layouts/Auth";
-import DashboardLayout from "../layouts/Dashboard";
+import AuthLayout from "@/layouts/Auth";
+import DashboardLayout from "@/layouts/Dashboard";
 
 // Pages
-import Login from "../pages/Auth/Login";
-import Home from "../pages/Home";
+import Login from "@/pages/Auth/Login";
+import Home from "@/pages/Home";
 
-import ErrorPage from "../pages/ErrorPage";
+import ErrorPage from "@/pages/ErrorPage";
+import ExistingFormsPage from "@/pages/ExisitingForms";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/existing-forms",
+        element: <ExistingFormsPage />,
       },
     ],
   },
