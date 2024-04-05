@@ -34,6 +34,15 @@ const router = createBrowserRouter([
         path: "/existing-forms",
         element: <ExistingFormsPage />,
       },
+      {
+        path: "/existing-forms/:id",
+        element: <ExistingFormsPage />,
+        children: [
+          {
+            path: ":subItemId",
+          },
+        ],
+      },
     ],
   },
 ]);
