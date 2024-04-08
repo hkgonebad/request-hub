@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { InputGroup, Button, Form } from "react-bootstrap";
-import { FiSearch } from "react-icons/fi";
 
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import FormSearch from "@/components/ui/FormSearch";
 import BusinessUnits from "@/pages/ExisitingForms/BusinessUnits";
 import { BusinessUnit } from "@/models/interfaces";
 
@@ -23,25 +22,13 @@ const ExistingFormsPage = () => {
           <div className="blockHeader">
             <div className="bhTitle">
               {/* Conditionally render breadcrumbs */}
-              {selectedItem && (
-                <Breadcrumbs
-                  bc={selectedItem}
-                  isActive={!!selectedItem}
-                  onClick={handleGoBack}
-                />
-              )}
+              {selectedItem && <Breadcrumbs bc={selectedItem} isActive={!!selectedItem} onClick={handleGoBack} />}
 
               <h2>Existing Forms</h2>
             </div>
 
-            <div className="bhSearch">
-              <InputGroup className="mb-3">
-                <Form.Control placeholder="Search" />
-                <Button variant="outline">
-                  <FiSearch />
-                </Button>
-              </InputGroup>
-            </div>
+            {/* Search */}
+            <FormSearch />
           </div>
 
           {/* Business Units */}
