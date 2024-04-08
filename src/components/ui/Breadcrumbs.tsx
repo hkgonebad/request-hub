@@ -1,17 +1,12 @@
 import { FiArrowLeft } from "react-icons/fi";
 
-import {
-  BreadcrumbItemProps,
-  BusinessUnit,
-  SubBusinessUnit,
-} from "@/models/interfaces";
+import { BreadcrumbItemProps, BusinessUnit, SubBusinessUnit } from "@/models/interfaces";
 import { useNavigate } from "react-router-dom";
 
 const Breadcrumbs = ({ bc, isActive }: BreadcrumbItemProps) => {
+  console.log(bc);
   // Type guard function to check if the item is a BusinessUnit
-  const isBusinessUnit = (
-    item: BusinessUnit | SubBusinessUnit
-  ): item is BusinessUnit => {
+  const isBusinessUnit = (item: BusinessUnit | SubBusinessUnit): item is BusinessUnit => {
     return (item as BusinessUnit).subBusinessUnits !== undefined;
   };
 

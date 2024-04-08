@@ -2,11 +2,7 @@ import { Card } from "react-bootstrap";
 import { FiChevronRight } from "react-icons/fi";
 
 // Interfaces
-import {
-  DisplayCardsProps,
-  BusinessUnit,
-  SubBusinessUnit,
-} from "@/models/interfaces";
+import { DisplayCardsProps, BusinessUnit, SubBusinessUnit } from "@/models/interfaces";
 
 const DisplayCards = ({
   items,
@@ -25,10 +21,7 @@ const DisplayCards = ({
   };
 
   return (
-    <Card
-      className={`dc-card ${isSelected ? "selected" : ""}`}
-      onClick={handleClick}
-    >
+    <Card className={`dc-card ${isSelected ? "selected" : ""}`} onClick={handleClick}>
       <Card.Body>
         <img src={items?.img} />
         <Card.Title>{items?.name}</Card.Title>
@@ -37,10 +30,7 @@ const DisplayCards = ({
       {isBusinessUnit(items) && (
         <Card.Footer className="dc-footer">
           <p>
-            Forms{" "}
-            <span>
-              {isBusinessUnit(items) ? items.subBusinessUnits?.length : ""}
-            </span>
+            Forms <span>{isBusinessUnit(items) ? items.subBusinessUnits?.length : ""}</span>
           </p>
           <FiChevronRight />
         </Card.Footer>
@@ -50,9 +40,7 @@ const DisplayCards = ({
 };
 
 // Type guard function to check if the item is a BusinessUnit
-const isBusinessUnit = (
-  item: BusinessUnit | SubBusinessUnit
-): item is BusinessUnit => {
+const isBusinessUnit = (item: BusinessUnit | SubBusinessUnit): item is BusinessUnit => {
   return (item as BusinessUnit).subBusinessUnits !== undefined;
 };
 
