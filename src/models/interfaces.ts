@@ -17,8 +17,8 @@ export interface BusinessUnit {
   subBusinessUnits?: SubBusinessUnit[];
 }
 
-export interface SubBusinessUnit {
-  id: number;
-  name: string;
-  img: string;
+export interface SubBusinessUnit extends BusinessUnit {
+  type?: string;
+  mobile?: string;
+  address?: string;
 }
