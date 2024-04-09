@@ -3,10 +3,11 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import DisplayCards from "@/components/ui/DisplayCards";
+import DisplayCards from "@/pages/ExisitingForms/ui/DisplayCards";
 import { BusinessUnit, SubBusinessUnit } from "@/models/interfaces";
 import businessUnits from "@/pages/ExisitingForms/businessUnitsData";
-import ClientDetail from "@/components/ui/ClientDetail";
+import ClientDetail from "@/pages/ExisitingForms/ui/ClientDetail";
+import EditForm from "@/pages/ExisitingForms/EditForm";
 
 const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | null) => void }) => {
   const [selectedItem, setSelectedItem] = useState<BusinessUnit | null>(null);
@@ -72,7 +73,13 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
           </Swiper>
         )}
 
-        {selectedSubItem && <ClientDetail clientDetails={selectedSubItem} />}
+        {selectedSubItem && (
+          <>
+            <ClientDetail clientDetails={selectedSubItem} />
+
+            <EditForm item={selectedSubItem} />
+          </>
+        )}
       </div>
     </section>
   );

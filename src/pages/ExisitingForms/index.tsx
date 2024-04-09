@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import FormSearch from "@/components/ui/FormSearch";
+import Breadcrumbs from "@/pages/ExisitingForms/ui/Breadcrumbs";
+import FormSearch from "@/pages/ExisitingForms/ui/FormSearch";
 import BusinessUnits from "@/pages/ExisitingForms/BusinessUnits";
 import { BusinessUnit } from "@/models/interfaces";
 
