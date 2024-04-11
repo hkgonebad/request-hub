@@ -1,0 +1,68 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+
+    .loginHero {
+        background: url('./assets/img/bg/login-bg.jpg') no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+        max-width: 868px;
+        color: white;
+        flex: 1;
+        padding: 0 40px;
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            min-height: auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            position: absolute;
+            top: 30%;
+
+            b {
+                font-size: 2rem;
+                font-weight: 900;
+                display: block;
+            }
+        }
+    }
+
+    .loginForm {
+        background: white;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        flex-basis: 400px;
+
+        >img {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .forgotText {
+            font-size: .875rem;
+        }
+    }
+}
