@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { Accordion, Form, Stack, ToggleButton } from "react-bootstrap";
+import { Accordion, Form, Stack } from "react-bootstrap";
 import { FiEdit2, FiMove, FiTrash2 } from "react-icons/fi";
 import { useWizard } from "react-use-wizard";
 import OtpInput from "react-otp-input";
 
 const Step1 = () => {
-  const { isLoading, isLastStep, isFirstStep, activeStep, previousStep, nextStep, handleStep } = useWizard();
-
-  const [checked, setChecked] = useState(false);
-  const [radioValue, setRadioValue] = useState("1");
+  const { handleStep } = useWizard();
   const [otp, setOtp] = useState("");
 
   // Attach an optional handler
