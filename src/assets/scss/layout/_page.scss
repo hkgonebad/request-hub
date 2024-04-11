@@ -1,0 +1,64 @@
+.blockHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .bhTitle {
+
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: .875rem;
+            color: #6C757D;
+
+            .btn {
+                padding: 0;
+            }
+
+            a {
+                color: #6C757D;
+                text-decoration: none;
+            }
+
+            .breadcrumb-separator {
+                margin: 0 5px;
+            }
+
+            .count {
+                color: #fff;
+                font-size: .75rem;
+                height: 18px;
+                width: 18px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: #6C757D;
+            }
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 900;
+            margin: 0;
+        }
+    }
+
+    .bhSearch {
+
+        .input-group {
+            background: #fff;
+            overflow: hidden;
+            border: 1px solid #E5E5E5;
+            border-radius: 20px;
+
+            .form-control {
+                border: none;
+            }
+
+
+        }
+    }
+}

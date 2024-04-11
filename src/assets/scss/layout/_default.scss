@@ -1,5 +1,5 @@
 body {
-    background: #fff;
+    background: #EAF1FF;
     overflow-x: hidden;
     overflow-y: auto;
     min-height: 100vh;
@@ -12,6 +12,20 @@ body {
     @include media-breakpoint-down(lg) {
         max-width: 100%;
     }
+}
+
+section {
+
+    &.block {
+        padding: 60px 0;
+    }
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // margin: 0 auto;
 }
 
 .form-control {
@@ -42,6 +56,12 @@ body {
 
     &.btn-link {
         text-decoration: none;
+    }
+}
+
+.input-group {
+    .btn {
+        --bs-btn-padding-x: .75rem;
     }
 }
 

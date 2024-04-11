@@ -24,10 +24,10 @@ const Breadcrumbs = ({ bc, isActive }: BreadcrumbItemProps) => {
             <FiArrowLeft />
           </Link> */}
           <button className="btn" onClick={handleGoBack}>
-            <FiArrowLeft />
+            <FiArrowLeft className="icon" />
           </button>
           <span>{bc?.name}</span>
-          <span>{isBusinessUnit(bc) ? bc.subBusinessUnits?.length : ""}</span>
+          <span className="count">{isBusinessUnit(bc) ? bc.subBusinessUnits?.length : ""}</span>
         </div>
       )}
     </>
