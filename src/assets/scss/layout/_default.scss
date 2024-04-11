@@ -3,7 +3,15 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     min-height: 100vh;
+    color: #000;
+    font-weight: 500;
 
+}
+
+.container {
+    @include media-breakpoint-down(lg) {
+        max-width: 100%;
+    }
 }
 
 .form-control {
@@ -13,6 +21,10 @@ body {
 .btn {
     --bs-btn-font-size: .875rem;
     --bs-btn-padding-x: 1.2rem;
+
+    &.noBtn {
+        padding: 0;
+    }
 
     &.btn-primary {
         color: #fff;
@@ -30,5 +42,20 @@ body {
 
     &.btn-link {
         text-decoration: none;
+    }
+}
+
+.dropdown {
+
+    .dropdown-menu {
+
+        .dropdown-item {
+            font-size: .875rem;
+            font-weight: 500;
+
+            &:hover {
+                background-color: #F8F9FA;
+            }
+        }
     }
 }
