@@ -3,6 +3,7 @@ import logo from "@/assets/img/logo.svg";
 import { FiBell } from "react-icons/fi";
 
 import Menu from "./Menu";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -26,11 +27,7 @@ const Header = () => {
 
             {/* Notification Dropdown */}
             <Dropdown className="notification">
-              <Dropdown.Toggle
-                bsPrefix="noBtn"
-                id="notification"
-                variant="none"
-              >
+              <Dropdown.Toggle bsPrefix="noBtn" id="notification" variant="none">
                 <FiBell />
                 <span>4</span>
               </Dropdown.Toggle>
@@ -49,9 +46,15 @@ const Header = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Settings</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Profile</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+                <NavLink to="/profile" className="dropdown-item">
+                  Profile
+                </NavLink>
+                <NavLink to="/settings" className="dropdown-item">
+                  Settings
+                </NavLink>
+                <NavLink to="/" className="dropdown-item">
+                  Logout
+                </NavLink>
               </Dropdown.Menu>
             </Dropdown>
           </Stack>
