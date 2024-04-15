@@ -41,6 +41,7 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
                 goToStep(index);
               }}
             >
+              <span>{index + 1}</span>
               {item.label}
             </button>
           ))}
@@ -102,12 +103,14 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
         </Stack>
 
         {/* Wizard */}
-        <Wizard startIndex={0} header={<WizardNav />} footer={<WizardFooter />}>
-          <Step1 />
-          <Step2 />
-          <Step3 />
-          <Step4 />
-        </Wizard>
+        <div className="wizard">
+          <Wizard startIndex={0} header={<WizardNav />} footer={<WizardFooter />}>
+            <Step1 />
+            <Step2 />
+            <Step3 />
+            <Step4 />
+          </Wizard>
+        </div>
       </div>
     </section>
   );

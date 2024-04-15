@@ -23,7 +23,9 @@ const DisplayCards = ({
   return (
     <Card className={`dc-card ${isSelected ? "selected" : ""}`} onClick={handleClick}>
       <Card.Body>
-        <img src={items?.img} />
+        <div className="card-image">
+          <img src={items?.img} />
+        </div>
         <Card.Title>{items?.name}</Card.Title>
       </Card.Body>
       {/* Display the footer only for BusinessUnit and not SubBusinessUnit */}
@@ -32,7 +34,7 @@ const DisplayCards = ({
           <p>
             Forms <span>{isBusinessUnit(items) ? items.subBusinessUnits?.length : ""}</span>
           </p>
-          <FiChevronRight />
+          <FiChevronRight className="icon" />
         </Card.Footer>
       )}
     </Card>

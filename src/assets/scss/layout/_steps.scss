@@ -1,0 +1,144 @@
+.stepsWizard {}
+
+.wizard {
+    border: 1px solid #00002233;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+
+    .wizardNav {
+
+        .nav {
+            border-bottom: 1px solid #00002233;
+            background: #F5F5F5;
+            padding: 15px 30px;
+
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #F5F5F5;
+                z-index: -1;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding: 15px;
+            }
+
+            .btn {
+                border: none;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                color: #999999;
+                font-size: .8rem;
+                font-weight: 700;
+                width: 1%;
+                flex-grow: 1;
+                position: relative;
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    height: 36px;
+                    width: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background: #D5D5D5;
+                    color: #999999;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &:not(:last-child) {
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 24px;
+                        right: calc(-50% - 16px);
+                        width: 100%;
+                        height: 2px;
+                        background: #CCCCCC;
+                        z-index: 0;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: #000;
+
+                    span {
+                        background: $secondary;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .wizardHeader {
+            padding: 15px 30px;
+            background: #fff;
+            gap: 15px;
+
+            @include media-breakpoint-down(md) {
+                flex-flow: column;
+                flex-wrap: wrap;
+            }
+
+            .wzImg {
+                @include media-breakpoint-down(md) {
+                    text-align: center;
+                    margin: 0 auto;
+                    6
+                }
+
+                img {}
+            }
+
+            .wzMeta {
+                border: 1px solid #E5E5E5;
+                border-radius: 20px;
+                background: #EAF1FF;
+                padding: 4px 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: 36px;
+
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                    flex-flow: column;
+                }
+
+                b {
+                    font-size: .875rem;
+                    color: #666666;
+                    font-weight: 400;
+
+                    span {
+                        color: #000000;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .wzStep {}
+
+    .WizardFooter {}
+}

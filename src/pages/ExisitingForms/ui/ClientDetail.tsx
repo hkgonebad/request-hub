@@ -28,7 +28,7 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
           {/* Actions */}
           <Stack className="cdAction ms-auto justify-content-end" direction="horizontal">
             <button className="btn btn-link text-success">
-              Edit <FiEdit2 />
+              Edit <FiEdit2 className="icon" />
             </button>
           </Stack>
 
@@ -38,28 +38,36 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
               <img src={clientDetails?.img} alt="" />
             </div>
             <div className="cdiBox ">
-              <FiUser />
+              <i className="cdiIcon">
+                <FiUser className="icon" />
+              </i>
               <h3>
                 <span>User Type</span>
                 {clientDetails?.type}
               </h3>
             </div>
             <div className="cdiBox ">
-              <FiUser />
+              <i className="cdiIcon">
+                <FiUser className="icon" />
+              </i>
               <h3>
                 <span>Customer ID</span>
                 {clientDetails?.id}
               </h3>
             </div>
             <div className="cdiBox ">
-              <FiPhone />
+              <i className="cdiIcon">
+                <FiPhone className="icon" />
+              </i>
               <h3>
                 <span>Contact Number</span>
                 {clientDetails?.mobile}
               </h3>
             </div>
             <div className="cdiBox ">
-              <FiMail />
+              <i className="cdiIcon">
+                <FiMail className="icon" />
+              </i>
               <h3>
                 <span>Address</span>
                 {clientDetails?.address}
@@ -72,10 +80,10 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
           {/* Actions */}
           <Stack className="cdAction ms-auto justify-content-end" direction="horizontal">
             <button className="btn btn-link text-success">
-              Edit Form <FiEdit2 />
+              Edit Form <FiEdit2 className="icon" />
             </button>
             <button className="btn btn-link text-danger">
-              Delete Form <FiTrash2 />
+              Delete Form <FiTrash2 className="icon" />
             </button>
           </Stack>
 
@@ -98,12 +106,14 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
               </Row>
 
               <Form.Group className="mb-3" controlId="cdComments">
-                <Form.Control as="textarea" />
+                <Form.Control as="textarea" rows={6} placeholder="Customer Comments" />
               </Form.Group>
 
+              {/* Dropzone */}
+              <h4>Upload and attach Evidence</h4>
               <Form.Group controlId="cdUpload" {...getRootProps({ className: "dropzone mb-3" })}>
                 <input className="" {...getInputProps()} />
-                <FiUploadCloud />
+                <FiUploadCloud className="icon" />
                 <p>
                   <span className="text-primary">Click to Upload</span> or Drag and Drop the file
                 </p>
@@ -114,7 +124,7 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
                   <span key={name}>
                     {name}
                     <i onClick={() => handleRemoveFile(name)}>
-                      <FiXCircle />
+                      <FiXCircle className="icon" />
                     </i>
                   </span>
                 ))}

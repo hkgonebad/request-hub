@@ -1,0 +1,140 @@
+.cdAction {
+    margin-bottom: 10px;
+    gap: 15px;
+
+    .btn {
+        font-weight: 700;
+        font-size: .875rem;
+        padding: 2px 6px;
+        border-radius: 0;
+        position: relative;
+
+        &:not(:last-child) {
+
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 15px;
+                background: #e1e1e1;
+                position: absolute;
+                right: -10px;
+                top: 7px;
+            }
+        }
+    }
+}
+
+.clientDetail {
+
+    .cdInfo {
+
+
+        .cdiBox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: #053E8F;
+            border-radius: 6px;
+            padding: 15px;
+            overflow: hidden;
+            min-height: 70px;
+
+            h3 {
+                font-size: .9rem;
+                font-weight: 700;
+                color: #fff;
+
+                span {
+                    font-size: .75rem;
+                    color: #B7B7C5;
+                    display: block;
+                }
+            }
+
+            .cdiIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #D9D9D9;
+                color: #000;
+                border-radius: 50%;
+                height: 42px;
+                width: 42px;
+
+                svg {
+                    width: 30px;
+                }
+
+            }
+
+            &.cdiLogo {
+                justify-content: center;
+                background: #F7F9FD;
+                border: #A6CDCD 1px solid;
+
+                img {}
+            }
+        }
+    }
+}
+
+.cdForm {
+    border: 1px solid #00002233;
+    padding: 20px;
+    border-radius: 6px;
+
+    h4 {
+        font-size: .875rem;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .dropzone {
+        border: 1px dashed #CCCCCC;
+        border-radius: 2px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        gap: 10px;
+        background: #FFFFFF80;
+        color: $primary;
+        font-size: .75rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .3s;
+
+        input {}
+
+        .icon {
+            width: 30px;
+            font-size: 1rem;
+            color: $primary;
+        }
+
+        p {
+            color: #000;
+            margin: 0;
+
+            span {}
+        }
+
+        &:hover {
+            background: #FFFFFF;
+        }
+    }
+
+    .uploadedFiles {
+
+        span {
+
+            i {
+
+                .icon {}
+            }
+        }
+    }
+}
