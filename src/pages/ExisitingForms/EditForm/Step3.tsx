@@ -11,8 +11,8 @@ const Step3 = () => {
   });
 
   // Delete notification
-  const deleteNotification = (e) => {
-    const chip = e.target.closest(".cnChip");
+  const deleteNotification = (e: React.MouseEvent) => {
+    const chip = (e.target as HTMLElement).closest(".cnChip");
     if (chip) {
       chip.remove();
     }
