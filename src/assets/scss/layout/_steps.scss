@@ -280,6 +280,60 @@
                     font-size: .875rem;
                 }
             }
+
+            &.wzItemWell {
+                background: #F5F5F5;
+                padding: 15px;
+            }
+
+            .successMessage {
+
+                .smImg {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .smContent {
+                    h3 {
+                        font-size: 3.25rem;
+                        font-weight: 700;
+                        color: $success;
+                        margin-bottom: 0;
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 2.25rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.25rem;
+                        font-weight: 300;
+                        color: #000;
+                        margin-bottom: 5px;
+
+                        b {
+                            font-weight: 700;
+                            color: $primary;
+                        }
+                    }
+
+                    b {
+                        font-size: .875rem;
+                        font-weight: 700;
+                        color: #000;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: .875rem;
+                font-weight: 700;
+                color: #666666;
+                margin-bottom: 10px;
+
+            }
         }
     }
 
@@ -319,4 +373,47 @@
 
         }
     }
+}
+
+.cNotifications {
+
+    .cnChips {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .cnChip {
+            border: 1px solid #E5E5E5;
+            background: #FFFFFF80;
+            border-radius: 20px;
+            padding: 4px 10px 4px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .875rem;
+            cursor: pointer;
+            height: 30px;
+
+            span {
+                margin-right: 30px;
+            }
+
+            .icon {
+                color: $danger;
+                cursor: pointer;
+            }
+
+            &:hover {
+                background: #FFFFFF;
+            }
+
+        }
+    }
+
+
+
+
 }
