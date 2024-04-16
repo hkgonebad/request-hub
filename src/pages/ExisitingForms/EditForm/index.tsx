@@ -5,7 +5,6 @@ import { FiEdit2, FiEye, FiTrash2 } from "react-icons/fi";
 
 import { useParams } from "react-router-dom";
 import { Wizard, useWizard } from "react-use-wizard";
-import { motion, AnimatePresence } from "framer-motion";
 
 import Step1 from "./Step1";
 import Step2 from "./Step2";
@@ -68,12 +67,12 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
 
   // Wizard Footer
   const WizardFooter = () => {
-    const { nextStep, previousStep, isLoading, activeStep, stepCount, isLastStep, isFirstStep } = useWizard();
+    const { nextStep, previousStep, isLoading, isLastStep, isFirstStep } = useWizard();
     return (
       <div className="wizardFooter">
         <Stack className="btns" direction="horizontal">
-          <a href="btn btn-link ">
-            <FiEye /> Preview
+          <a className="btn btn-link text-secondary">
+            <FiEye className="icon" /> Preview
           </a>
           <button className="btn btn-outline-light" onClick={() => previousStep()} disabled={isFirstStep || isLoading}>
             Cancel
