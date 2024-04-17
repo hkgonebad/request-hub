@@ -20,10 +20,10 @@ const Header = () => {
 
           {/* User */}
           <Stack direction="horizontal" className="user ms-auto">
-            <a href="#!" className="myRequest btn">
+            <NavLink to="requests" className="myRequest btn">
               <i>My Request</i>
               <span>2</span>
-            </a>
+            </NavLink>
 
             {/* Notification Dropdown */}
             <Dropdown className="notification">

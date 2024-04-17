@@ -19,6 +19,14 @@ section {
     &.block {
         padding: 60px 0;
     }
+
+    &.blockTitle {
+        padding: 40px 0 0;
+
+        +.block {
+            padding-top: 30px;
+        }
+    }
 }
 
 .icon {

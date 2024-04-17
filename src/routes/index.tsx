@@ -10,6 +10,7 @@ import Home from "@/pages/Home";
 
 import ErrorPage from "@/pages/ErrorPage";
 import ExistingFormsPage from "@/pages/ExisitingForms";
+import RequestsPage from "@/pages/Requests";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             path: ":subItemId",
           },
         ],
+      },
+      {
+        path: "/requests",
+        element: <RequestsPage />,
       },
     ],
   },

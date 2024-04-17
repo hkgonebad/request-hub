@@ -16,7 +16,7 @@ const ExistingFormsPage = () => {
 
   return (
     <>
-      <section className="block">
+      <section className="block blockTitle">
         <div className="container">
           {/* Block Header */}
           <div className="blockHeader">
@@ -30,11 +30,11 @@ const ExistingFormsPage = () => {
             {/* Search */}
             <FormSearch />
           </div>
-
-          {/* Business Units */}
-          <BusinessUnits onSelectItem={setSelectedItem} />
         </div>
       </section>
+
+      {/* Business Units */}
+      <BusinessUnits onSelectItem={setSelectedItem} />
     </>
   );
 };

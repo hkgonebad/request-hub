@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Breadcrumbs = ({ bc, isActive }: BreadcrumbItemProps) => {
   // console.log(bc);
   // Type guard to check if the item is a BusinessUnit
-  const isBusinessUnit = (item: BusinessUnit | SubBusinessUnit): item is BusinessUnit => {
+  const isBusinessUnit = (item: BusinessUnit | SubBusinessUnit | null): item is BusinessUnit => {
     return (item as BusinessUnit).subBusinessUnits !== undefined;
   };
 

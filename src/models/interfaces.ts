@@ -1,5 +1,5 @@
 export interface BreadcrumbItemProps {
-  bc: BusinessUnit | SubBusinessUnit;
+  bc: BusinessUnit | SubBusinessUnit | null;
   onClick?: () => void;
   isActive: boolean;
 }
