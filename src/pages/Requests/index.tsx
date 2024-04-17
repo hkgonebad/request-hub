@@ -1,4 +1,4 @@
-import { FiEye, FiTrash2 } from "react-icons/fi";
+import { FiEye, FiMessageSquare, FiTrash2 } from "react-icons/fi";
 import Breadcrumbs from "../ExisitingForms/ui/Breadcrumbs";
 import FormSearch from "../ExisitingForms/ui/FormSearch";
 
@@ -12,7 +12,7 @@ const RequestsPage = () => {
             <div className="bhTitle">
               <Breadcrumbs bc={null} isActive={false} />
 
-              <h2>Existing Forms</h2>
+              <h2>My Requests</h2>
             </div>
 
             {/* Search */}
@@ -28,64 +28,89 @@ const RequestsPage = () => {
             <table className="table table-striped table-hover">
               <thead>
                 <tr>
+                  {/*  */}
+                  <th>Sr.No</th>
                   <th>Request ID</th>
-                  <th>Request Type</th>
+                  <th>Raised By</th>
+                  <th>Assigned to</th>
                   <th>Request Date</th>
-                  <th>Requester</th>
-                  <th>Request Status</th>
+                  <th>Status</th>
+                  <th>Business Comments</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>REQ-001</td>
-                  <td>Business Approval</td>
-                  <td>2021-09-01</td>
-                  <td>John Doe</td>
+                  <td>01</td>
+                  <td>RDRR1001</td>
+                  <td>Priyanka Mohan</td>
+                  <td>Shailesh Naik</td>
+                  <td>07/01/2024</td>
                   <td>
-                    <span className="badge badge-primary">Pending</span>
+                    <span className="badge bg-warning">In-Progress</span>
                   </td>
+                  <td>N/A</td>
                   <td>
-                    <a className="btn btn-link text-success">
-                      <FiEye className="icon" /> View
-                    </a>
-                    <a className="btn btn-link text-danger">
-                      <FiTrash2 className="icon" /> Delete
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>REQ-002</td>
-                  <td>Business Approval</td>
-                  <td>2021-09-01</td>
-                  <td>John Doe</td>
-                  <td>
-                    <span className="badge badge-success">Approved</span>
-                  </td>
-                  <td>
-                    <a className="btn btn-link text-success">
-                      <FiEye className="icon" /> View
-                    </a>
-                    <a className="btn btn-link text-danger">
-                      <FiTrash2 className="icon" /> Delete
-                    </a>
+                    <div className="actions">
+                      <a href="#!" className="btn btnView">
+                        <FiEye />
+                      </a>
+                      <a href="#!" className="btn btnDelete">
+                        <FiTrash2 />
+                      </a>
+                      <a href="#!" className="btn btnComments">
+                        <FiMessageSquare />
+                      </a>
+                    </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>REQ-003</td>
-                  <td>Business Approval</td>
-                  <td>2021-09-01</td>
-                  <td>John Doe</td>
+                  <td>02</td>
+                  <td>RDRR1002</td>
+                  <td>Priyanka Mohan</td>
+                  <td>Shailesh Naik</td>
+                  <td>07/01/2024</td>
                   <td>
-                    <span className="badge badge-danger">Rejected</span>
+                    <span className="badge bg-success">Approved</span>
                   </td>
+                  <td>Completed</td>
                   <td>
-                    <a className="btn btn-link text-success">
-                      <FiEye className="icon" /> View
-                    </a>
-                    <a className="btn btn-link text-danger">
-                      <FiTrash2 className="icon" /> Delete
-                    </a>
+                    <div className="actions">
+                      <a href="#!" className="btn btnView">
+                        <FiEye />
+                      </a>
+                      <a href="#!" className="btn btnDelete">
+                        <FiTrash2 />
+                      </a>
+                      <a href="#!" className="btn btnComments">
+                        <FiMessageSquare />
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>RDRR1003</td>
+                  <td>Priyanka Mohan</td>
+                  <td>Shailesh Naik</td>
+                  <td>07/01/2024</td>
+                  <td>
+                    {" "}
+                    <span className="badge bg-danger">Rejected</span>
+                  </td>
+                  <td>Rejected</td>
+                  <td>
+                    <div className="actions">
+                      <a href="#!" className="btn btnView">
+                        <FiEye />
+                      </a>
+                      <a href="#!" className="btn btnDelete">
+                        <FiTrash2 />
+                      </a>
+                      <a href="#!" className="btn btnComments">
+                        <FiMessageSquare />
+                      </a>
+                    </div>
                   </td>
                 </tr>
               </tbody>
