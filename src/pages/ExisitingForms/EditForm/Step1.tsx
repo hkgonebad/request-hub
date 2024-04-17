@@ -28,11 +28,11 @@ const Step1 = () => {
                   Select User
                 </label>
                 <input type="radio" className="btn-check" name="options" id="option1" />
-                <label className="btn btn-secondary" htmlFor="option1">
+                <label className="btn btn-info btn-check-toggle" htmlFor="option1">
                   Customer
                 </label>
                 <input type="radio" className="btn-check" name="options" id="option2" />
-                <label className="btn btn-secondary" htmlFor="option2">
+                <label className="btn btn-info btn-check-toggle" htmlFor="option2">
                   Employee
                 </label>
               </Form.Group>

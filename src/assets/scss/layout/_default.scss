@@ -66,6 +66,19 @@ section {
     &.btn-link {
         text-decoration: none;
     }
+
+    &.btn-check-toggle {
+        border-radius: 25px;
+        height: 30px;
+        font-size: .75rem !important;
+        --bs-btn-padding-y: .2rem;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: darken($info, 10%);
+        }
+    }
 }
 
 .input-group {
