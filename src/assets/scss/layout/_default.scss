@@ -120,3 +120,34 @@ section {
         background: #F5F5F5;
     }
 }
+
+.otpInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .form-control {
+        padding: 0;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+
+.captcha {
+
+    .captchaImg {
+        height: 35px;
+        overflow: hidden;
+        padding: 0;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

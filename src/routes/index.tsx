@@ -11,6 +11,7 @@ import Home from "@/pages/Home";
 import ErrorPage from "@/pages/ErrorPage";
 import ExistingFormsPage from "@/pages/ExisitingForms";
 import RequestsPage from "@/pages/Requests";
+import LoginAlt from "@/pages/Auth/LoginAlt";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     element: <DashboardLayout />,
     children: [
+      {
+        path: "/login",
+        element: <LoginAlt />,
+      },
       {
         path: "/home",
         element: <Home />,
