@@ -37,8 +37,10 @@ section {
 }
 
 .form-control,
-.form-select {
+.form-select,
+.form-label {
     font-size: .875rem;
+    font-weight: 500;
 }
 
 .btn {
@@ -99,5 +101,22 @@ section {
                 background-color: #F8F9FA;
             }
         }
+    }
+}
+
+.formModal {
+
+    h5 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .form-check-label {
+        font-size: .875rem;
+        font-weight: 500;
+    }
+
+    .modal-footer {
+        background: #F5F5F5;
     }
 }
