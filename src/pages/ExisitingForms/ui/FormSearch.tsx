@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 
 const FormSearch = () => {
   return (
-    <div className="bhSearch">
+    <div className="bhForm">
       <InputGroup className="">
         <Form.Control placeholder="Search" />
         <Button variant="outline">
