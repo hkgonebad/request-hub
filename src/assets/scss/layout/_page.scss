@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 
     .bhTitle {
 
@@ -46,7 +47,7 @@
         }
     }
 
-    .bhSearch {
+    .bhForm {
 
         .input-group {
             background: #fff;
@@ -57,8 +58,12 @@
             .form-control {
                 border: none;
             }
+        }
 
-
+        .form-select {
+            background-color: #fff;
+            border: 1px solid #E5E5E5;
+            border-radius: 20px;
         }
     }
 }

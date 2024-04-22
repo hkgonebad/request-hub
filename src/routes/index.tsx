@@ -12,6 +12,7 @@ import ErrorPage from "@/pages/ErrorPage";
 import ExistingFormsPage from "@/pages/ExisitingForms";
 import RequestsPage from "@/pages/Requests";
 import LoginAlt from "@/pages/Auth/LoginAlt";
+import Dashboard from "@/pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/existing-forms",
