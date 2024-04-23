@@ -13,6 +13,7 @@ import ExistingFormsPage from "@/pages/ExisitingForms";
 import RequestsPage from "@/pages/Requests";
 import LoginAlt from "@/pages/Auth/LoginAlt";
 import Dashboard from "@/pages/Dashboard";
+import ViewRequest from "@/pages/Requests/View";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/requests",
         element: <RequestsPage />,
+      },
+      {
+        path: "/requests/view",
+        element: <ViewRequest />,
       },
     ],
   },

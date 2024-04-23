@@ -1,7 +1,8 @@
 export interface BreadcrumbItemProps {
-  bc: BusinessUnit | SubBusinessUnit | null;
+  bc: string | BusinessUnit | SubBusinessUnit | null;
   onClick?: () => void;
   isActive: boolean;
+  backBtn?: boolean;
 }
 
 export interface DisplayCardsProps {
