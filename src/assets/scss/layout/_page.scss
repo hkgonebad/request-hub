@@ -15,6 +15,14 @@
 
             .btn {
                 padding: 0;
+                color: $primary;
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    margin-left: 5px;
+                    display: inline-block;
+                }
             }
 
             a {

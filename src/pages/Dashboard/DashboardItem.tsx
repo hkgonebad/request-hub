@@ -1,4 +1,4 @@
-const DashboardItem = ({ type, value, text }: { type: string; value: string; text: string }) => {
+const DashboardItem = ({ type, value, text }: { type: string; value: number; text: string }) => {
   const getColorClass = () => {
     switch (type) {
       case "primary":
