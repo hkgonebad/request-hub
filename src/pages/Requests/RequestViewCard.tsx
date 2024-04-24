@@ -1,7 +1,13 @@
-import { InputGroup, Button, Stack, Form } from "react-bootstrap";
-import { FiSearch, FiSend } from "react-icons/fi";
+import { useState } from "react";
+import { InputGroup, Button, Stack, Form, Modal } from "react-bootstrap";
+import { FiCreditCard, FiFile, FiHome, FiSearch, FiSend, FiUser, FiUsers } from "react-icons/fi";
 
 const RequestViewCard = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="card rv-card requestView">
       <div className="card-header">
@@ -13,7 +19,9 @@ const RequestViewCard = () => {
               <Button variant="outline-primary">
                 <FiSearch />
               </Button>
-              <Button variant="primary">View Customer Details</Button>
+              <Button variant="primary" onClick={handleShow}>
+                View Customer Details
+              </Button>
             </InputGroup>
           </Form.Group>
 
@@ -111,6 +119,83 @@ const RequestViewCard = () => {
           <button className="btn btn-primary">Approved</button>
         </Stack>
       </div>
+
+      <Modal show={show} onHide={handleClose} size="lg" className="customerReportModal">
+        <Modal.Header closeButton>
+          <Modal.Title>Customer data principal report</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="crDetails">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="cr-card ">
+                  <div className="cr-body">
+                    <FiUser className="icon" />
+                    <h5>Customer Contact Information</h5>
+                  </div>
+                  <div className="cr-footer">
+                    <p>Sai Aashish</p>
+                    <p>7309874501</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-3">
+                <div className="cr-card">
+                  <div className="cr-body">
+                    <FiUsers className="icon" />
+                    <h5>Demographic Details Age</h5>
+                  </div>
+                  <div className="cr-footer">
+                    <p>Male</p>
+                    <p>27 Yrs</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="cr-card">
+                  <div className="cr-body">
+                    <FiHome className="icon" />
+                    <h5>Residential Address Information</h5>
+                  </div>
+                  <div className="cr-footer">
+                    <p>7-80/2/24, MIDC Industrial Area, Ghansoli, Navi Mumbai, Maharashtra 400701</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="cr-card">
+                  <div className="cr-body">
+                    <FiCreditCard className="icon" />
+                    <h5>Financial Information</h5>
+                  </div>
+                  <div className="cr-footer">
+                    <p>
+                      <span>Credit card number</span>41XX XXXX XXXX XX00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="cr-card">
+                  <div className="cr-body">
+                    <FiFile className="icon" />
+                    <h5>National Identifiers</h5>
+                  </div>
+                  <div className="cr-footer">
+                    <p>
+                      <span>Aadhaar Card</span>XXXX XXXX 2122
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

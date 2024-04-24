@@ -157,3 +157,55 @@
         }
     }
 }
+
+.cr-card {
+    @extend .card;
+    border: #A6CDCD 1px solid;
+    text-align: center;
+    margin-bottom: 15px;
+
+    .cr-body {
+        @extend .card-body;
+
+        .icon {
+            font-size: 1.5rem;
+            color: #A6CDCD;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-size: .75rem;
+            font-weight: 700;
+            color: #333333;
+            min-height: 28px;
+            margin: 0;
+        }
+    }
+
+    .cr-footer {
+        @extend .card-footer;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+        background: #E3F0FD;
+        border-top: 0;
+
+        p {
+            font-size: .9rem;
+            font-weight: 700;
+            color: #000;
+            margin: 0;
+
+            span {
+                display: block;
+                font-size: .75rem;
+            }
+
+            &+p {
+                border-top: 1px solid #CCCCCC;
+            }
+        }
+    }
+}
