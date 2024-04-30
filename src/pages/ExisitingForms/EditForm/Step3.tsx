@@ -2,6 +2,8 @@ import { Accordion, Form, Button, InputGroup, Offcanvas, ListGroup } from "react
 import { FiXCircle } from "react-icons/fi";
 import { useState } from "react";
 import { useWizard } from "react-use-wizard";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 // Notification Data
 const notificationData = [
@@ -107,15 +109,19 @@ const Step3 = () => {
       </Accordion>
 
       {/* Add Comment */}
-      <Offcanvas show={show} onHide={handleClose} placement="bottom" name="Add Comment">
+      <Offcanvas show={show} onHide={handleClose} placement="bottom" name="Message Details">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Add Comment</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           {/* Text Field to appear on Click of any Notification */}
           <Form.Group className="mb-3">
-            <Form.Label>Notification Text</Form.Label>
-            <Form.Control as="textarea" rows={4} type="text" placeholder="" />
+            <Form.Label>Message Subject</Form.Label>
+            <Form.Control type="text" placeholder="" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Message Body</Form.Label>
+            <ReactQuill theme="snow" />
           </Form.Group>
           <Form.Group className="mb-3 text-end">
             <button className="btn btn-primary">Save</button>
