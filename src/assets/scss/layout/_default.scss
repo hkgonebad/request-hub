@@ -97,8 +97,11 @@ section {
             font-size: .875rem;
             font-weight: 500;
 
-            &:hover {
-                background-color: #F8F9FA;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $primary;
+                color: #fff;
             }
         }
     }
@@ -150,4 +153,8 @@ section {
             object-fit: contain;
         }
     }
+}
+
+.offcanvas {
+    --bs-offcanvas-height: auto;
 }
