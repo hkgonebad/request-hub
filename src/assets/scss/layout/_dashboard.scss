@@ -5,13 +5,76 @@
         border-radius: 10px;
         border-color: #DDDDDD;
 
+        &.db-cardAlt {
+            border-color: #A6CDCD;
+            background: #D4E1FC;
+        }
+
         @include media-breakpoint-down(md) {
             margin-bottom: 15px;
         }
 
         .card-body {
-            padding: 1.12rem;
+            padding: 0.875rem 1rem;
         }
+
+
+    }
+
+    .dr-card {
+
+        border-radius: 10px;
+        border-color: #DDDDDD;
+
+        &.dr-cardAlt {
+            border-color: #A6CDCD;
+            background: #D4E1FC;
+        }
+
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 15px;
+        }
+
+        +.dr-card {
+            margin-top: 15px;
+        }
+
+        .card-body {
+            padding: 0.875rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h4 {
+                color: #333333;
+                font-size: 1rem;
+                font-weight: 700;
+                flex: 1;
+                margin: 0;
+
+                span {
+                    display: block;
+                    font-size: .875rem;
+                    font-weight: 500;
+                    color: #666666;
+                }
+            }
+
+            b {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.125rem;
+                font-weight: 700;
+                color: #fff;
+                background: $secondary;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+
     }
 }
 
@@ -105,4 +168,13 @@
             box-shadow: 0 0px 0px inset $primary;
         }
     }
+}
+
+.circleProgress {
+    height: 116px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }

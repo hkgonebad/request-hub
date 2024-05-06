@@ -1,4 +1,4 @@
-import Breadcrumbs from "../ExisitingForms/ui/Breadcrumbs";
+import Breadcrumbs from "../../components/common/Breadcrumbs";
 import RequestViewCard from "./RequestViewCard";
 import RequestJourneyCard from "./RequestJourneyCard";
 

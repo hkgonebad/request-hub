@@ -1,7 +1,7 @@
 import FormSearch from "@/pages/ExisitingForms/ui/FormSearch";
 import { Form, Pagination } from "react-bootstrap";
 import { FiDownload, FiInfo } from "react-icons/fi";
-import DashboardItem from "./DashboardItem";
+import DashboardItem from "./ui/DashboardItem";
 
 const Dashboard = () => {
   const active = 2;

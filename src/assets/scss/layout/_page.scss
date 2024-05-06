@@ -73,6 +73,31 @@
             border: 1px solid #E5E5E5;
             border-radius: 20px;
         }
+
+        &.bhForm-Multi {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .bhLabel {
+                font-size: .75rem;
+                color: #999999
+            }
+
+            .bhfCol {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+
+                .form-control {
+                    border-radius: 20px;
+                }
+
+                .cancel {
+                    color: $danger;
+                }
+            }
+        }
     }
 }
 

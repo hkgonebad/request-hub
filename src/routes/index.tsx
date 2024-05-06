@@ -14,6 +14,8 @@ import RequestsPage from "@/pages/Requests";
 import LoginAlt from "@/pages/Auth/LoginAlt";
 import Dashboard from "@/pages/Dashboard";
 import ViewRequest from "@/pages/Requests/View";
+import DashboardSpoc from "@/pages/Dashboard/DashboardSpoc";
+import ReportsPage from "@/pages/Reports";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,10 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
+        path: "/dashboard-spoc",
+        element: <DashboardSpoc />,
+      },
+      {
         path: "/existing-forms",
         element: <ExistingFormsPage />,
       },
@@ -66,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: "/requests/view",
         element: <ViewRequest />,
+      },
+      {
+        path: "/reports",
+        element: <ReportsPage />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Nav, Navbar } from "react-bootstrap";
+import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { FiMenu } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
@@ -28,6 +28,14 @@ const Menu: React.FC = () => {
                 History Logs
               </NavLink>
             </Nav.Item>
+            <NavDropdown title="Dashboard" id="basic-nav-dropdown">
+              <NavLink to="/dashboard" className="dropdown-item">
+                Dashboard
+              </NavLink>
+              <NavLink to="/dashboard-spoc" className="dropdown-item">
+                Dashboard Spoc
+              </NavLink>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
