@@ -25,20 +25,15 @@ const Login = () => {
             />
           </div>
           <div className="form-group mb-3">
-            <input
-              type="passwords"
-              className="form-control"
-              name="password"
-              placeholder="Password"
-            />
+            <input type="passwords" className="form-control" name="password" placeholder="Password" />
           </div>
-          <div className="form-group mb-3 text-end">
-            <Link to="">Forgot Password</Link>
+          <div className="form-group mb-3 text-end forgotText">
+            <Link to="" className="text-warning">
+              Forgot Password ?
+            </Link>
           </div>
           <Stack direction="horizontal" gap={2} className="btns ">
-            <button className="btn btn-outline-primary flex-fill">
-              Login by Single-Sign-On
-            </button>
+            <button className="btn btn-outline-primary flex-fill">Login by Single-Sign-On</button>
             <Link to="/home" className="btn btn-primary">
               Proceed
             </Link>

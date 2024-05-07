@@ -1,14 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
 
 // Layouts
-import AuthLayout from "../layouts/Auth";
-import DashboardLayout from "../layouts/Dashboard";
+import AuthLayout from "@/layouts/Auth";
+import DashboardLayout from "@/layouts/Dashboard";
 
 // Pages
-import Login from "../pages/Auth/Login";
-import Home from "../pages/Home";
+import Login from "@/pages/Auth/Login";
+import Home from "@/pages/Home";
 
-import ErrorPage from "../pages/ErrorPage";
+import ErrorPage from "@/pages/ErrorPage";
+import ExistingFormsPage from "@/pages/ExisitingForms";
+import RequestsPage from "@/pages/Requests";
+import LoginAlt from "@/pages/Auth/LoginAlt";
+import Dashboard from "@/pages/Dashboard";
+import ViewRequest from "@/pages/Requests/View";
+import DashboardSpoc from "@/pages/Dashboard/DashboardSpoc";
+import ReportsPage from "@/pages/Reports";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +33,49 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
+        path: "/login",
+        element: <LoginAlt />,
+      },
+      {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/dashboard-spoc",
+        element: <DashboardSpoc />,
+      },
+      {
+        path: "/existing-forms",
+        element: <ExistingFormsPage />,
+      },
+      // {
+      //   path: "/existing-forms/edit/:id",
+      //   element: <EditForm id={undefined} />,
+      // },
+      {
+        path: "/existing-forms/:id",
+        element: <ExistingFormsPage />,
+        children: [
+          {
+            path: ":subItemId",
+          },
+        ],
+      },
+      {
+        path: "/requests",
+        element: <RequestsPage />,
+      },
+      {
+        path: "/requests/view",
+        element: <ViewRequest />,
+      },
+      {
+        path: "/reports",
+        element: <ReportsPage />,
       },
     ],
   },

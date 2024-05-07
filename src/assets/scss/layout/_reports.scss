@@ -1,0 +1,26 @@
+.infoHeader {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E4E4E4;
+    background: #F5F5F5;
+    gap: 15px;
+    padding: .5rem 1rem;
+
+    .ihBox {
+        padding: 1rem;
+
+        h4 {
+            color: #666666;
+            font-size: .75rem;
+            font-weight: 500;
+            margin: 0;
+
+            span {
+                display: block;
+                font-size: .9375rem;
+                font-weight: 700;
+                color: #000000;
+            }
+        }
+    }
+}

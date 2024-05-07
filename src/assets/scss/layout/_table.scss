@@ -1,0 +1,62 @@
+.table {
+    border-radius: 6px;
+    overflow: hidden;
+
+    thead {
+
+        th {
+            background-color: #053E8F;
+            color: #fff;
+            padding: 10px;
+        }
+    }
+
+    th,
+    td {
+        font-size: .8rem;
+        vertical-align: middle;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .btn {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 14px;
+                background-color: #ccc;
+                position: absolute;
+                right: -7px;
+                transform: scale(0.5);
+            }
+        }
+    }
+
+    .btnView {
+        color: $success;
+    }
+
+    .btnDelete,
+    .btnInfo {
+        color: $danger;
+    }
+
+    .btnComments {
+        color: $primary;
+    }
+}

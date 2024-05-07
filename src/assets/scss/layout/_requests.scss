@@ -1,0 +1,211 @@
+.requestView {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 15px;
+    }
+}
+
+.rv-card {
+    .card-header {
+        background: #FFFFFF;
+    }
+
+    .card-body {
+        background: #F6F6F6;
+    }
+
+    .card-footer {
+        background: #fff;
+        padding: 15px;
+    }
+
+    label {
+        margin-bottom: 2px;
+        font-size: .75rem;
+        font-weight: 500;
+        color: #666666;
+    }
+
+    .rvReadonly {
+        label {
+            margin-bottom: 0px;
+            font-size: .875rem;
+            color: #999999;
+        }
+
+        p {
+            margin-bottom: 5px;
+            font-size: .75rem;
+            font-weight: 700;
+            color: #333333;
+        }
+    }
+}
+
+.rj-card {
+    box-shadow: 0px 0px 15px 0px #B0A5D880 inset;
+
+    .card-header {
+        background: #FFFFFF;
+    }
+
+    .card-body {
+        padding: 0;
+        background: #F6F6F6;
+    }
+
+    .rjStep {
+        position: relative;
+        padding: 15px 15px;
+        padding-right: 40px;
+        background: #FFFFFF;
+        overflow: hidden;
+
+        &:nth-child(odd) {
+            background: #0000000D;
+        }
+
+        b {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background: #FFFFFF;
+            border: 1px solid #0000001A;
+            border-radius: 50%;
+            font-size: .875rem;
+            color: #333333;
+
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 1px;
+                height: 100px;
+                border: 1px dashed #0000001A;
+            }
+
+            &:after {
+                top: 100%;
+            }
+
+            &:before {
+                bottom: 100%;
+            }
+        }
+
+        h4 {
+            margin-bottom: 2px;
+            font-size: .7rem;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        p {
+            margin-bottom: 5px;
+            font-size: .875rem;
+            color: #666666;
+        }
+
+        >span {
+            display: inline-block;
+            transform: translateX(-15px);
+            padding: 2px 8px 2px 15px;
+            background: $secondary;
+            border-radius: 0 20px 20px 0;
+            font-size: .75rem;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+
+        .rjStatus {
+
+            h4 {
+                margin-bottom: 0;
+                font-size: .7rem;
+                font-weight: 700;
+                color: #000000;
+            }
+
+            span {
+                display: inline-block;
+                font-size: .75rem;
+                font-weight: 700;
+            }
+        }
+
+        &:first-child {
+            b {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        &:last-child {
+            b {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.cr-card {
+    @extend .card;
+    border: #A6CDCD 1px solid;
+    text-align: center;
+    margin-bottom: 15px;
+
+    .cr-body {
+        @extend .card-body;
+
+        .icon {
+            font-size: 1.5rem;
+            color: #A6CDCD;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-size: .75rem;
+            font-weight: 700;
+            color: #333333;
+            min-height: 28px;
+            margin: 0;
+        }
+    }
+
+    .cr-footer {
+        @extend .card-footer;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+        background: #E3F0FD;
+        border-top: 0;
+
+        p {
+            font-size: .9rem;
+            font-weight: 700;
+            color: #000;
+            margin: 0;
+
+            span {
+                display: block;
+                font-size: .75rem;
+            }
+
+            &+p {
+                border-top: 1px solid #CCCCCC;
+            }
+        }
+    }
+}

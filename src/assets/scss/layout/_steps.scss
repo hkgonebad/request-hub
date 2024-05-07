@@ -1,0 +1,419 @@
+.stepsWizard {}
+
+.wizard {
+    border: 1px solid #00002233;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+
+    .wizardNav {
+
+        .nav {
+            border-bottom: 1px solid #00002233;
+            background: #F5F5F5;
+            padding: 15px 30px;
+
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #F5F5F5;
+                z-index: -1;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding: 15px;
+            }
+
+            .btn {
+                border: none;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                color: #999999;
+                font-size: .8rem;
+                font-weight: 700;
+                width: 1%;
+                flex-grow: 1;
+                position: relative;
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    height: 36px;
+                    width: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    background: #D5D5D5;
+                    color: #999999;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &:not(:last-child) {
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 24px;
+                        right: calc(-50% - 16px);
+                        width: 100%;
+                        height: 2px;
+                        background: #CCCCCC;
+                        z-index: 0;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: #000;
+
+                    span {
+                        background: $secondary;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .wizardHeader {
+            padding: 15px 30px;
+            background: #fff;
+            gap: 15px;
+
+            @include media-breakpoint-down(md) {
+                flex-flow: column;
+                flex-wrap: wrap;
+            }
+
+            .wzImg {
+                @include media-breakpoint-down(md) {
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                img {
+                    @include media-breakpoint-up(md) {
+                        height: 30px;
+                    }
+
+                }
+            }
+
+            .wzMeta {
+                border: 1px solid #E5E5E5;
+                border-radius: 20px;
+                background: #EAF1FF;
+                padding: 4px 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: 36px;
+
+                @include media-breakpoint-down(md) {
+                    height: auto;
+                    flex-flow: column;
+                }
+
+                b {
+                    font-size: .75rem;
+                    color: #666666;
+                    font-weight: 400;
+
+                    span {
+                        color: #000000;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .wzStep {
+        padding: 15px 30px;
+        border-top: 1px solid #00002233;
+
+        .accordion {
+            border: none;
+            background: #fff;
+
+            .accordion-item {
+                border: none;
+
+                .accordion-button {
+                    background: #fff;
+                    box-shadow: none;
+                    padding: 10px 0;
+                    font-size: .875rem;
+                    font-weight: 500;
+                }
+
+                .accordion-body {
+                    padding: 0;
+
+                }
+            }
+        }
+
+        .wzItem {
+            border: 1px solid #E5E5E5;
+            padding: 8px 8px;
+            gap: 10px;
+
+            @include media-breakpoint-down(md) {
+                flex-flow: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+
+            >.icon {
+                color: #666666;
+                font-size: .875rem;
+                height: 10px;
+                width: 10px;
+                margin: 0 10px;
+                flex-shrink: 0;
+                transform: rotate(45deg);
+
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            >span {
+                font-size: .875rem;
+                font-weight: 700;
+                color: #000000;
+                display: inline-block;
+                padding: 0 10px;
+
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            .form-group {
+                min-width: 467px;
+
+                @include media-breakpoint-down(md) {
+                    min-width: auto;
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+
+                label {
+                    font-size: .875rem;
+                    font-weight: 500;
+                    color: #000;
+                    white-space: nowrap;
+
+                    @include media-breakpoint-down(md) {
+                        display: block;
+                        margin-bottom: 5px;
+                        flex: 1;
+                    }
+                }
+
+                .form-control {
+
+                    @include media-breakpoint-down(md) {}
+                }
+
+                .otpInput {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .form-control {
+                        padding: 0;
+                        text-align: center;
+                        width: 35px;
+                        height: 35px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+                }
+
+                &.captcha {
+
+                    .captchaImg {
+                        height: 35px;
+                        overflow: hidden;
+                        padding: 0;
+
+                        img {
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+
+            .actionBtns {
+
+                @include media-breakpoint-down(md) {
+                    margin-left: initial !important;
+                }
+
+                .btn {
+                    padding: .2rem .5rem;
+                    font-size: .875rem;
+                }
+            }
+
+            &.wzItemWell {
+                background: #F5F5F5;
+                padding: 15px;
+            }
+
+            .successMessage {
+
+                .smImg {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .smContent {
+                    h3 {
+                        font-size: 3.25rem;
+                        font-weight: 700;
+                        color: $success;
+                        margin-bottom: 0;
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 2.25rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.25rem;
+                        font-weight: 300;
+                        color: #000;
+                        margin-bottom: 5px;
+
+                        b {
+                            font-weight: 700;
+                            color: $primary;
+                        }
+                    }
+
+                    b {
+                        font-size: .875rem;
+                        font-weight: 700;
+                        color: #000;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: .875rem;
+                font-weight: 700;
+                color: #666666;
+                margin-bottom: 10px;
+
+            }
+        }
+    }
+
+    .wizardFooter {
+        padding: 15px 30px;
+        background: #F5F5F5;
+        border-top: 1px solid #00002233;
+
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+
+            @include media-breakpoint-down(md) {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                font-size: .875rem;
+                font-weight: 500;
+                padding: 8px 20px;
+                margin: 0;
+
+                &.btn-outline-light {
+                    color: #999999;
+                    border: 1px solid #EEEEEE;
+                    background: #fff;
+
+                    &:hover {
+                        color: #fff;
+                        background: $secondary;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.cNotifications {
+
+    .cnChips {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .cnChip {
+            border: 1px solid #E5E5E5;
+            background: #FFFFFF80;
+            border-radius: 20px;
+            padding: 4px 10px 4px 20px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .8rem;
+            cursor: pointer;
+            height: 30px;
+
+            span {
+                margin-right: 30px;
+            }
+
+            .icon {
+                color: $danger;
+                cursor: pointer;
+            }
+
+            &:hover {
+                background: #FFFFFF;
+            }
+
+        }
+    }
+
+
+
+
+}
