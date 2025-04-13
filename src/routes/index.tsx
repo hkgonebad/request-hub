@@ -18,77 +18,81 @@ import ReportsPage from "@/pages/Reports";
 import Profile from "@/pages/Profile";
 import Notifications from "@/pages/Notifications";
 
-const router = createHashRouter([
+const router = createHashRouter(
+  [
+    {
+      path: "/",
+      element: <AuthLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <Login />,
+        },
+      ],
+    },
+    {
+      element: <DashboardLayout />,
+      children: [
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/home",
+          element: <Home />,
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard />,
+        },
+        {
+          path: "/dashboard-spoc",
+          element: <DashboardSpoc />,
+        },
+        {
+          path: "/existing-forms",
+          element: <ExistingFormsPage />,
+        },
+        {
+          path: "/existing-forms/:id",
+          element: <ExistingFormsPage />,
+          children: [
+            {
+              path: ":subItemId",
+            },
+          ],
+        },
+        {
+          path: "/requests",
+          element: <RequestsPage />,
+        },
+        {
+          path: "/requests/view",
+          element: <ViewRequest />,
+        },
+        {
+          path: "/reports",
+          element: <ReportsPage />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
+        },
+        {
+          path: "/notifications",
+          element: <Notifications />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <AuthLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Login />,
-      },
-    ],
-  },
-  {
-    element: <DashboardLayout />,
-    children: [
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/home",
-        element: <Home />,
-      },
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/dashboard-spoc",
-        element: <DashboardSpoc />,
-      },
-      {
-        path: "/existing-forms",
-        element: <ExistingFormsPage />,
-      },
-      // {
-      //   path: "/existing-forms/edit/:id",
-      //   element: <EditForm id={undefined} />,
-      // },
-      {
-        path: "/existing-forms/:id",
-        element: <ExistingFormsPage />,
-        children: [
-          {
-            path: ":subItemId",
-          },
-        ],
-      },
-      {
-        path: "/requests",
-        element: <RequestsPage />,
-      },
-      {
-        path: "/requests/view",
-        element: <ViewRequest />,
-      },
-      {
-        path: "/reports",
-        element: <ReportsPage />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
-      },
-      {
-        path: "/notifications",
-        element: <Notifications />,
-      },
-    ],
-  },
-]);
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    } as { v7_startTransition: boolean; v7_relativeSplatPath: boolean },
+  }
+);
 
 export default router;
 
