@@ -142,7 +142,7 @@
 
         &.dItemAlt {
             .diImg {
-                background: var(--bs-gray-700);
+                background: var(--bs-gray-500);
 
                 img,
                 .icon {
@@ -169,29 +169,36 @@
 
     // Header styles
     .mainHeader {
-        background: var(--bs-dark);
+        background: var(--bs-gray-900);
         border-bottom-color: var(--bs-border-color);
 
         .myRequest {
-            background: var(--bs-gray-800);
+            background-color: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
 
             &:hover {
-                background: var(--bs-gray-700);
+                background-color: var(--bs-gray-700);
             }
         }
 
-        .notification,
-        .profile {
-            .dropdown-menu {
-                background: var(--bs-gray-800);
-                border-color: var(--bs-border-color);
-            }
+        .user {
 
-            .notification-item {
-                border-bottom-color: var(--bs-border-color);
+            .notification,
+            .profile {
+                .noBtn {
+                    background-color: var(--bs-gray-800);
+                    border-color: var(--bs-border-color);
+                }
 
-                &.unread {
-                    background: var(--bs-gray-700);
+                .dropdown-menu {
+                    background: var(--bs-dark);
+                    border-color: var(--bs-border-color);
+                }
+
+                .notification-item {
+                    border-bottom-color: var(--bs-border-color) !important;
+
+                    &.unread {}
                 }
             }
         }
@@ -384,6 +391,21 @@
         --bs-table-hover-bg: var(--bs-gray-600);
         border-color: var(--bs-border-color);
         color: var(--bs-body-color);
+
+        thead {
+            th {
+                color: var(--bs-body-color);
+                background: var(--bs-gray-900);
+            }
+        }
+
+        .actions {
+            .btn {
+                background: var(--bs-dark);
+                border-color: var(--bs-border-color);
+
+            }
+        }
     }
 
     // Steps styles

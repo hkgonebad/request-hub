@@ -3,8 +3,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
 
-// Dark mode
-@import 'layout/dark';
+
 
 // Other Imports
 @import 'layout/default';
@@ -22,3 +21,6 @@
 @import 'layout/table';
 @import 'layout/requests';
 @import 'layout/reports';
+
+// Dark mode
+@import 'layout/dark';

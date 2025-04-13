@@ -5,7 +5,7 @@
     thead {
 
         th {
-            background-color: #0e0f11;
+            background-color: var(--bs-gray-900);
             color: #fff;
             padding: 10px;
         }
@@ -31,20 +31,9 @@
         justify-content: center;
         position: relative;
 
-        &:not(:last-child) {
-            margin-right: 5px;
+        background: var(--bs-dark);
+        border-color: var(--bs-border-color);
 
-            &:after {
-                content: '';
-                display: block;
-                width: 1px;
-                height: 14px;
-                background-color: #ccc;
-                position: absolute;
-                right: -7px;
-                transform: scale(0.5);
-            }
-        }
     }
 
     .btnView {
