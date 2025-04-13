@@ -1,4 +1,4 @@
-import logo from "@/assets/img/logo.svg";
+import logo from "@/assets/img/logo.webp";
 import { Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

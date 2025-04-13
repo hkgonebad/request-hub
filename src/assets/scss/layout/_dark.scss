@@ -223,6 +223,96 @@
         }
     }
 
+    // Login styles
+    .login {
+        background: var(--bs-dark);
+
+        .loginHero {
+            background: url('./assets/img/bg/login-bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            h1 {
+                color: var(--bs-light);
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        .loginForm {
+            background: var(--bs-gray-800);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+            h1,
+            p {
+                color: var(--bs-body-color);
+            }
+
+            .form-control {
+                background: var(--bs-gray-900);
+                border-color: var(--bs-border-color);
+                color: var(--bs-body-color);
+
+                &::placeholder {
+                    color: var(--bs-gray-500);
+                }
+            }
+
+            .forgotText {
+                a {
+                    color: var(--bs-warning) !important;
+                }
+            }
+
+            .btn-outline-primary {
+                color: var(--bs-primary);
+                border-color: var(--bs-primary);
+
+                &:hover {
+                    background-color: var(--bs-primary);
+                    color: #fff;
+                }
+            }
+        }
+
+        &.loginAlt {
+            background-image: url('./assets/img/bg/loginalt-bg.jpg');
+
+            .loginHero {
+                background-image: none;
+
+                h2,
+                h3,
+                h4,
+                p {
+                    color: var(--bs-light);
+                }
+            }
+
+            .loginForm {
+                .form-group {
+                    label {
+                        color: var(--bs-gray-300);
+                    }
+
+                    .otpResend {
+                        color: var(--bs-primary);
+                    }
+                }
+            }
+        }
+    }
+
     // Existing Forms
     .existing-forms {
         .form-card {
