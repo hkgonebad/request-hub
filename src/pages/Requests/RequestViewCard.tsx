@@ -164,76 +164,108 @@ const RequestViewCard = () => {
           <Modal.Title>Hero Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="row">
+          <div className="row g-3">
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiUser className="icon" />
-                <div className="cdText">
-                  <h4>Tony Stark</h4>
-                  <span>Iron Man</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiUser className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Tony Stark</h4>
+                    <span className="text-muted">Iron Man</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiHome className="icon" />
-                <div className="cdText">
-                  <h4>Stark Tower</h4>
-                  <span>New York, USA</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiHome className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Stark Tower</h4>
+                    <span className="text-muted">New York, USA</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiCreditCard className="icon" />
-                <div className="cdText">
-                  <h4>Avengers ID</h4>
-                  <span>AVG-001</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiCreditCard className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Avengers ID</h4>
+                    <span className="text-muted">AVG-001</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiUsers className="icon" />
-                <div className="cdText">
-                  <h4>Team</h4>
-                  <span>Avengers Core Team</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiUsers className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Team</h4>
+                    <span className="text-muted">Avengers Core Team</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiShield className="icon" />
-                <div className="cdText">
-                  <h4>Specialization</h4>
-                  <span>Technology, Combat</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiShield className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Specialization</h4>
+                    <span className="text-muted">Technology, Combat</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiAlertTriangle className="icon" />
-                <div className="cdText">
-                  <h4>Threat Level</h4>
-                  <span>Level 5</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiAlertTriangle className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Threat Level</h4>
+                    <span className="text-muted">Level 5</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiMapPin className="icon" />
-                <div className="cdText">
-                  <h4>Current Location</h4>
-                  <span>Avengers Compound</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiMapPin className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Current Location</h4>
+                    <span className="text-muted">Avengers Compound</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-6">
-              <div className="cdItem">
-                <FiFile className="icon" />
-                <div className="cdText">
-                  <h4>Active Missions</h4>
-                  <span>3</span>
+              <div className="cdItem card h-100">
+                <div className="card-body d-flex align-items-center">
+                  <div className="cdIcon me-3">
+                    <FiFile className="icon" />
+                  </div>
+                  <div className="cdText">
+                    <h4 className="mb-1">Active Missions</h4>
+                    <span className="text-muted">3</span>
+                  </div>
                 </div>
               </div>
             </div>

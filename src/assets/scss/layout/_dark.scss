@@ -547,7 +547,7 @@
                 border-color: var(--bs-border-color);
 
                 .icon {
-                    color: var(--bs-primary);
+                    color: var(--bs-teal);
                 }
 
                 .cdText {
@@ -1001,6 +1001,33 @@
             &:hover {
                 background: var(--bs-gray-800);
                 border-color: var(--bs-primary);
+            }
+        }
+    }
+
+    // Client Detail Item Styles
+    .cdItem {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            border-color: var(--bs-primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cdIcon {
+            background-color: rgba(var(--bs-primary-rgb), 0.15);
+            color: var(--bs-primary);
+        }
+
+        .cdText {
+            h4 {
+                color: var(--bs-body-color);
+            }
+
+            span {
+                color: var(--bs-gray-400);
             }
         }
     }

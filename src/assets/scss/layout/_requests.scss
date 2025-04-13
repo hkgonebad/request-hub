@@ -158,6 +158,48 @@
     }
 }
 
+// Client Detail Item Styles
+.cdItem {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-color: $primary;
+    }
+
+    .cdIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba($primary, 0.1);
+        color: $primary;
+
+        .icon {
+            font-size: 1.5rem;
+        }
+    }
+
+    .cdText {
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+
+        span {
+            font-size: 0.875rem;
+            color: #666;
+        }
+    }
+}
+
 .cr-card {
     @extend .card;
     border: #A6CDCD 1px solid;
