@@ -108,7 +108,7 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h3 className="section-title mb-0">Mission Teams in {selectedItem.name}</h3>
               <div className="d-flex gap-2">
-                <button className="btn btn-success" onClick={() => handleOpenCreateModal(FormType.TEAM)}>
+                <button className="btn btn-primary" onClick={() => handleOpenCreateModal(FormType.TEAM)}>
                   Create New Team
                 </button>
               </div>
