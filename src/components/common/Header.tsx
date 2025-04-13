@@ -1,5 +1,5 @@
 import { Dropdown, Stack } from "react-bootstrap";
-import logo from "@/assets/img/logo.svg";
+import logo from "@/assets/img/logo.webp";
 import { FiBell } from "react-icons/fi";
 
 import Menu from "./Menu";
@@ -11,9 +11,9 @@ const Header = () => {
       <div className="container">
         <Stack direction="horizontal" gap={2} className="mhRow">
           {/* Logo */}
-          <a href="#!" className="logo">
+          <NavLink to="/home" className="logo">
             <img src={logo} alt="" />
-          </a>
+          </NavLink>
 
           {/* Menu */}
           <Menu />
@@ -35,16 +35,14 @@ const Header = () => {
               <Dropdown.Menu align="end" className="notifications">
                 <div className="notification-item">
                   <p>
-                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta
-                    reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum
-                    soluta delectus accusantium sint praesentium autem.
+                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum soluta delectus accusantium
+                    sint praesentium autem.
                   </p>
                 </div>
                 <div className="notification-item">
                   <p>
-                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta
-                    reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum
-                    soluta delectus accusantium sint praesentium autem.
+                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum soluta delectus accusantium
+                    sint praesentium autem.
                   </p>
                 </div>
                 {/* <Dropdown.Item href="#/action-2">Notification 2</Dropdown.Item> */}

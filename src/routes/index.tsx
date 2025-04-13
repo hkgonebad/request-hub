@@ -11,7 +11,6 @@ import Home from "@/pages/Home";
 import ErrorPage from "@/pages/ErrorPage";
 import ExistingFormsPage from "@/pages/ExisitingForms";
 import RequestsPage from "@/pages/Requests";
-import LoginAlt from "@/pages/Auth/LoginAlt";
 import Dashboard from "@/pages/Dashboard";
 import ViewRequest from "@/pages/Requests/View";
 import DashboardSpoc from "@/pages/Dashboard/DashboardSpoc";
@@ -34,7 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/login",
-        element: <LoginAlt />,
+        element: <Login />,
       },
       {
         path: "/home",

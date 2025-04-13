@@ -2,7 +2,6 @@ import { Form, Nav, Stack, Tab } from "react-bootstrap";
 import { FiArrowRight, FiDownload, FiEye } from "react-icons/fi";
 import graphImg from "@/assets/img/graph.png";
 import RequestsTable from "./ui/RequestsTable";
-import DashboardItem from "./ui/DashboardItem";
 import DashboardReqCard from "./ui/DashboardReqCard";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -22,7 +21,7 @@ const DashboardSpoc = () => {
                   <h2>Request Status</h2>
                 </div>
 
-                <a href="#!" className="btn btn-link  text-secondary">
+                <a href="#!" className="btn btn-link  ">
                   Detailed View <FiArrowRight />{" "}
                 </a>
               </div>
@@ -31,22 +30,22 @@ const DashboardSpoc = () => {
                   <Nav fill className="" variant="tabs">
                     <Nav.Item>
                       <Nav.Link eventKey="first">
-                        Total active <span>67</span>
+                        Total active <span>85</span>
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">
-                        In Progress <span>35</span>
+                        In Progress <span>42</span>
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">
-                        Uninitiated <span>20</span>
+                        Uninitiated <span>25</span>
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="fourth">
-                        On-Hold <span>12</span>
+                        On-Hold <span>18</span>
                       </Nav.Link>
                     </Nav.Item>
                   </Nav>
@@ -80,19 +79,19 @@ const DashboardSpoc = () => {
                 <div className="bhForm">
                   <Form.Group controlId="wzForm1">
                     <Form.Select aria-label="Default select example">
-                      <option>Nov 2022 - Oct 2023</option>
-                      <option>Nov 2023 - Oct 2024</option>
-                      <option>Nov 2024 - Oct 2025</option>
+                      <option>Jan 2024 - Dec 2024</option>
+                      <option>Jan 2023 - Dec 2023</option>
+                      <option>Jan 2022 - Dec 2022</option>
                     </Form.Select>
                   </Form.Group>
                 </div>
               </div>
               <div className="card db-card mb-3">
                 <Stack direction="horizontal" gap={3} className="card-header justify-content-between">
-                  <a href="#!" className="btn btn-link text-secondary">
+                  <a href="#!" className="btn btn-link ">
                     <FiDownload /> Download Report
                   </a>
-                  <a href="#!" className="btn btn-link text-secondary">
+                  <a href="#!" className="btn btn-link ">
                     View Report <FiEye />
                   </a>
                 </Stack>
@@ -100,111 +99,75 @@ const DashboardSpoc = () => {
                   <img src={graphImg} alt="" className="w-100" />
                 </div>
               </div>
-
-              <div className="row">
-                <div className="col-md-6">
-                  <DashboardReqCard title="DPO / Privacy" subTitle="Team Requests" value="03" alt={false} />
-                </div>
-                <div className="col-md-6">
-                  <DashboardReqCard title="Legal" subTitle="Team Requests" value="05" alt={false} />
-                </div>
-              </div>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-lg-3">
-              <div className="card db-card db-cardAlt">
+            <div className="col-md-12 col-lg-6">
+              <div className="card db-card">
                 <div className="card-body">
                   {/* Block Header */}
                   <div className="blockHeader">
-                    <div className="bhForm w-100">
-                      <div className="form-group ">
-                        <select name="" id="" className="form-select">
-                          <option value="">This Week</option>
-                          <option value="">This Month</option>
-                          <option value="">This Year</option>
-                        </select>
-                      </div>
+                    <div className="bhTitle">
+                      <h2>Request Details</h2>
                     </div>
                   </div>
 
-                  {/* Circle Progress */}
-                  <div className="circleProgress">
-                    <CircularProgressbar
-                      value={percentage}
-                      text={`${percentage}%`}
-                      styles={buildStyles({
-                        // pathColor: `linear-gradient(48.26deg, #0D719F 21.87%, #540982 105.33%)`,
-                        pathColor: `#540982`,
-                        textColor: "#0A0A0A",
-                        textSize: "22px",
-                      })}
-                    />
+                  {/* Request Cards */}
+                  <div className="row">
+                    <div className="col-md-6">
+                      <DashboardReqCard title="Total Requests" subTitle="This Month" value="42" alt={false} />
+                    </div>
+                    <div className="col-md-6">
+                      <DashboardReqCard title="Completed Requests" subTitle="This Month" value="28" alt={false} />
+                    </div>
+                    <div className="col-md-6">
+                      <DashboardReqCard title="Pending Requests" subTitle="This Month" value="10" alt={false} />
+                    </div>
+                    <div className="col-md-6">
+                      <DashboardReqCard title="Rejected Requests" subTitle="This Month" value="4" alt={false} />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="col-md-12 col-lg-6">
-              <div className="card db-card db-cardAlt mb-3">
+              <div className="card db-card">
                 <div className="card-body">
                   {/* Block Header */}
                   <div className="blockHeader">
                     <div className="bhTitle">
-                      <h2>My Requests</h2>
-                    </div>
-
-                    {/* Select Month */}
-                    <div className="bhForm">
-                      <Form.Group controlId="wzForm1">
-                        <Form.Select aria-label="Default select example">
-                          <option>Select Month</option>
-                          <option value="1">January</option>
-                          <option value="2">February</option>
-                          <option value="3">March</option>
-                          <option value="4">April</option>
-                          <option value="5">May</option>
-                          <option value="6">June</option>
-                          <option value="7">July</option>
-                          <option value="8">August</option>
-                          <option value="9">September</option>
-                          <option value="10">October</option>
-                          <option value="11">November</option>
-                          <option value="12">December</option>
-                        </Form.Select>
-                      </Form.Group>
+                      <h2>SLA Compliance</h2>
                     </div>
                   </div>
 
-                  {/* Dashboard Items */}
-                  <div className="row ">
-                    <div className="col-md-3">
-                      <DashboardItem type="success" value={102} text="Completed" />
-                    </div>
-                    <div className="col-md-3">
-                      <DashboardItem type="danger" value={23} text="Rejected" />
+                  {/* SLA Compliance */}
+                  <div className="row align-items-center">
+                    <div className="col-md-6">
+                      <div className="slaProgress">
+                        <CircularProgressbar
+                          value={percentage}
+                          text={`${percentage}%`}
+                          styles={buildStyles({
+                            textSize: "16px",
+                            pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
+                            textColor: "#3e98c7",
+                            trailColor: "#d6d6d6",
+                            backgroundColor: "#3e98c7",
+                          })}
+                        />
+                      </div>
                     </div>
                     <div className="col-md-6">
-                      <div className="dItem dItemAlt">
-                        <div className="diImg">
-                          <FiDownload className="icon" />
-                        </div>
-                        <div className="diText">
-                          <h3>Download</h3>
-                          <span>Entire History Log Report</span>
-                        </div>
+                      <div className="slaInfo">
+                        <h4>SLA Compliance Rate</h4>
+                        <p>Stark Enterprises is committed to meeting all service level agreements within the specified timeframes. Our current compliance rate is 72%, which is above the industry standard of 65%.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-3">
-              <DashboardReqCard title="DPO / Privacy" subTitle="Team Requests" value="10" alt={true} />
-              <DashboardReqCard title="Admin" subTitle="Config" value="03" alt={true} />
-              <DashboardReqCard title="Total Businesses" subTitle="and sub BU’s" value="25" alt={true} />
             </div>
           </div>
         </div>

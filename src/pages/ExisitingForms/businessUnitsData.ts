@@ -1,68 +1,68 @@
 import { BusinessUnit } from "@/models/interfaces";
 
-// Data for Business units and sub-business units
+// Data for Marvel departments and teams
 const businessUnits: BusinessUnit[] = [
   {
     id: 0,
-    name: "Reliance Retail",
-    img: "/src/assets/img/logos/reliance-retail.svg",
+    name: "Avengers Division",
+    img: "/src/assets/img/logos/avengers.svg",
     subBusinessUnits: [
       {
         id: 1,
-        name: "Reliance Digital",
-        img: "/src/assets/img/logos/reliance-retail.svg",
+        name: "Core Team",
+        img: "/src/assets/img/logos/core-team.svg",
       },
       {
         id: 2,
-        name: "Netmeds",
-        img: "/src/assets/img/logos/netmeds.svg",
+        name: "New Avengers",
+        img: "/src/assets/img/logos/new-avengers.svg",
       },
       {
         id: 3,
-        name: "Reliance Jewels",
-        img: "/src/assets/img/logos/reliance-jewels.svg",
+        name: "Young Avengers",
+        img: "/src/assets/img/logos/young-avengers.svg",
       },
       {
         id: 4,
-        name: "Reliance Trends",
-        img: "/src/assets/img/logos/trends.svg",
+        name: "West Coast",
+        img: "/src/assets/img/logos/west-coast.svg",
       },
       {
         id: 5,
-        name: "Reliance Smart",
-        img: "/src/assets/img/logos/reliance-smart.svg",
+        name: "Secret Avengers",
+        img: "/src/assets/img/logos/secret-avengers.svg",
       },
       {
         id: 6,
-        name: "Reliance Trends",
-        img: "/src/assets/img/logos/trends.svg",
+        name: "Mighty Avengers",
+        img: "/src/assets/img/logos/mighty-avengers.svg",
       },
       {
         id: 7,
-        name: "Reliance Smart",
-        img: "/src/assets/img/logos/reliance-smart.svg",
+        name: "Dark Avengers",
+        img: "/src/assets/img/logos/dark-avengers.svg",
       },
     ],
   },
   {
     id: 8,
-    name: "RBML - Jio BP",
-    img: "src/assets/img/logos/reliance-bp.svg",
+    name: "X-Men Division",
+    img: "src/assets/img/logos/x-men.svg",
   },
   {
     id: 9,
-    name: "Reliance Foundation",
-    img: "src/assets/img/logos/reliance-foundation.svg",
+    name: "Fantastic Four",
+    img: "src/assets/img/logos/fantastic-four.svg",
   },
   {
     id: 10,
-    name: "Reliance Life Sciences",
-    img: "src/assets/img/logos/reliance-lifesciences.svg",
+    name: "Defenders",
+    img: "src/assets/img/logos/defenders.svg",
   },
   {
     id: 11,
-    name: "Oil to Chemicals",
-    img: "src/assets/img/logos/reliance-chemicals.svg",
+    name: "Guardians of the Galaxy",
+    img: "src/assets/img/logos/guardians.svg",
   },
 ];
 

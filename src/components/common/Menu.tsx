@@ -13,29 +13,29 @@ const Menu: React.FC = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="mainNav">
           <Nav className="justify-content-center" activeKey="/home">
-            <Nav.Item>
-              <NavLink to="/existing-forms" className="nav-link">
-                Existing Forms
+            <NavDropdown title="Mission Control" id="basic-nav-dropdown">
+              <NavLink to="/home" className="dropdown-item">
+                Mission Dashboard
               </NavLink>
-            </Nav.Item>
-            <Nav.Item>
-              <NavLink to="/messages" className="nav-link">
-                Create New Form
-              </NavLink>
-            </Nav.Item>
-            <Nav.Item>
-              <NavLink to="/messages" className="nav-link">
-                History Logs
-              </NavLink>
-            </Nav.Item>
-            <NavDropdown title="Dashboard" id="basic-nav-dropdown">
               <NavLink to="/dashboard" className="dropdown-item">
-                Dashboard
-              </NavLink>
-              <NavLink to="/dashboard-spoc" className="dropdown-item">
-                Dashboard Spoc
+                Request Analytics
               </NavLink>
             </NavDropdown>
+            <Nav.Item>
+              <NavLink to="/existing-forms" className="nav-link">
+                Mission Forms
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/requests" className="nav-link">
+                Mission Requests
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to="/reports" className="nav-link">
+                Mission Reports
+              </NavLink>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

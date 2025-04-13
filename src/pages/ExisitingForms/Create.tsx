@@ -8,7 +8,7 @@ const CreateUnit = () => {
           {/* Block Header */}
           <div className="blockHeader">
             <div className="bhTitle">
-              <h2>Create New</h2>
+              <h2>Create New Team</h2>
             </div>
           </div>
         </div>
@@ -19,89 +19,87 @@ const CreateUnit = () => {
           <div className="row">
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Name</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Label>Team Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter team name" />
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Description</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Label>Team Description</Form.Label>
+                <Form.Control type="text" placeholder="Enter team description" />
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Type</Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Label>Team Type</Form.Label>
+                <Form.Select aria-label="Select team type">
                   <option>Select Type</option>
-                  <option value="1">Type 1</option>
-                  <option value="2">Type 2</option>
-                  <option value="3">Type 3</option>
+                  <option value="1">Main Team</option>
+                  <option value="2">Special Ops</option>
+                  <option value="3">Support Team</option>
+                  <option value="4">Training Team</option>
                 </Form.Select>
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Category</Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Label>Team Category</Form.Label>
+                <Form.Select aria-label="Select team category">
                   <option>Select Category</option>
-                  <option value="1">Category 1</option>
-                  <option value="2">Category 2</option>
-                  <option value="3">Category 3</option>
+                  <option value="1">Earth Defense</option>
+                  <option value="2">Space Operations</option>
+                  <option value="3">Multiverse Protection</option>
+                  <option value="4">Special Investigations</option>
                 </Form.Select>
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Sub-Category</Form.Label>
-                <Form.Select aria-label="Default select example">
-                  <option>Select Sub-Category</option>
-                  <option value="1">Sub-Category 1</option>
-                  <option value="2">Sub-Category 2</option>
-                  <option value="3">Sub-Category 3</option>
+                <Form.Label>Team Specialization</Form.Label>
+                <Form.Select aria-label="Select team specialization">
+                  <option>Select Specialization</option>
+                  <option value="1">Combat</option>
+                  <option value="2">Technology</option>
+                  <option value="3">Magic</option>
+                  <option value="4">Intelligence</option>
                 </Form.Select>
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Status</Form.Label>
-                <Form.Select aria-label="Default select example">
+                <Form.Label>Team Status</Form.Label>
+                <Form.Select aria-label="Select team status">
                   <option>Select Status</option>
-                  <option value="1">Status 1</option>
-                  <option value="2">Status 2</option>
-                  <option value="3">Status 3</option>
+                  <option value="1">Active</option>
+                  <option value="2">Standby</option>
+                  <option value="3">Training</option>
+                  <option value="4">Inactive</option>
                 </Form.Select>
               </Form.Group>
             </div>
-            {/* Upload logo , Contact, Address, etc */}
+            {/* Team logo, Contact, Base Location, etc */}
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Logo</Form.Label>
+                <Form.Label>Team Logo</Form.Label>
                 <Form.Control type="file" />
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Contact</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Label>Team Leader</Form.Label>
+                <Form.Control type="text" placeholder="Enter team leader name" />
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Address</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Label>Base Location</Form.Label>
+                <Form.Control type="text" placeholder="Enter base location" />
               </Form.Group>
             </div>
             <div className="col-md-4">
               <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Email</Form.Label>
-                <Form.Control type="email" placeholder="" />
-              </Form.Group>
-            </div>
-            <div className="col-md-4">
-              <Form.Group controlId="wzForm1" className="mb-3">
-                <Form.Label>Form Phone</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Label>Team Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter team email" />
               </Form.Group>
             </div>
           </div>

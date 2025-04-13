@@ -14,11 +14,11 @@ import Step5 from "./Step5";
 
 // Wizard Navigation Menu items
 const navItems = [
-  { label: "Webform Configuration", id: 0 },
-  { label: "Styling / Branding", id: 1 },
-  { label: "Customer Notifications", id: 2 },
-  { label: "Preview Form", id: 3 },
-  { label: "Raise Request", id: 4 },
+  { label: "Mission Configuration", id: 0 },
+  { label: "Team Assignment", id: 1 },
+  { label: "Resource Allocation", id: 2 },
+  { label: "Mission Preview", id: 3 },
+  { label: "Launch Mission", id: 4 },
 ];
 
 const EditForm = ({ item }: { item: SubBusinessUnit }) => {
@@ -52,13 +52,13 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
           </div>
           <Stack className="wzMeta" direction="horizontal">
             <b>
-              Last Update: <span>22/03/2019</span>
+              Last Update: <span>22/03/2024</span>
             </b>
             <b>
-              By Admin Config: <span>Amit Ray</span>
+              By Mission Control: <span>Tony Stark</span>
             </b>
             <b>
-              Business Approval By: <span>Shailesh Naik</span>
+              Approved By: <span>Nick Fury</span>
             </b>
           </Stack>
         </Stack>
@@ -74,26 +74,22 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
         <Stack className="btns" direction="horizontal">
           {!isLastStep && (
             <>
-              <a className="btn btn-link text-secondary">
-                <FiEye className="icon" /> Preview
+              <a className="btn btn-link ">
+                <FiEye className="icon" /> Mission Brief
               </a>
-              <button
-                className="btn btn-outline-light"
-                onClick={() => previousStep()}
-                disabled={isFirstStep || isLoading}
-              >
-                Cancel
+              <button className="btn btn-outline-light" onClick={() => previousStep()} disabled={isFirstStep || isLoading}>
+                Abort
               </button>
               <button className="btn btn-outline-light">Save Draft</button>
               <button className="btn btn-primary" onClick={() => nextStep()} disabled={isLastStep || isLoading}>
-                {isLastStep ? "Finish" : "Next"}
+                {isLastStep ? "Launch" : "Next"}
               </button>
             </>
           )}
 
           {isLastStep && (
             <button className="btn btn-primary" disabled={isLoading}>
-              Done
+              Launch Mission
             </button>
           )}
         </Stack>
@@ -109,10 +105,10 @@ const EditForm = ({ item }: { item: SubBusinessUnit }) => {
         {/* Actions */}
         <Stack className="cdAction ms-auto justify-content-end" direction="horizontal">
           <button className="btn btn-link text-success" disabled>
-            Edit Form <FiEdit2 />
+            Edit Mission <FiEdit2 />
           </button>
           <button className="btn btn-link text-danger">
-            Delete Form <FiTrash2 />
+            Cancel Mission <FiTrash2 />
           </button>
         </Stack>
 

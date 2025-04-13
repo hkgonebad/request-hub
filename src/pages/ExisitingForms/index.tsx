@@ -25,7 +25,7 @@ const ExistingFormsPage = () => {
               {/* Conditionally render breadcrumbs */}
               {selectedItem && <Breadcrumbs bc={selectedItem} isActive={!!selectedItem} onClick={handleGoBack} />}
 
-              <h2>Existing Forms</h2>
+              <h2>Hero Teams & Divisions</h2>
             </div>
 
             {/* Search */}
@@ -34,10 +34,10 @@ const ExistingFormsPage = () => {
         </div>
       </section>
 
-      {/* Business Units */}
+      {/* Hero Teams */}
       <BusinessUnits onSelectItem={setSelectedItem} />
 
-      {/* Create New */}
+      {/* Create New Team */}
       <CreateUnit />
     </>
   );

@@ -16,7 +16,7 @@ const ViewRequest = () => {
         </div>
       </section>
 
-      {/* Request Details */}
+      {/* Mission Details */}
       <section className="block request pt-0">
         <div className="container">
           <div className="row">

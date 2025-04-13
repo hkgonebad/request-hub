@@ -14,26 +14,25 @@ const RequestList = () => {
         <table className="table table-striped table-hover">
           <thead>
             <tr>
-              {/*  */}
               <th>Sr.No</th>
-              <th>Request ID</th>
-              <th>Raised By</th>
-              <th>Assigned to</th>
+              <th>Mission ID</th>
+              <th>Requested By</th>
+              <th>Assigned Hero</th>
               <th>Request Date</th>
               <th>Status</th>
-              <th>Business Comments</th>
+              <th>Mission Notes</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>01</td>
-              <td>RDRR1001</td>
-              <td>Priyanka Mohan</td>
-              <td>Shailesh Naik</td>
+              <td>MSN1001</td>
+              <td>Nick Fury</td>
+              <td>Iron Man</td>
               <td>07/01/2024</td>
               <td>
-                <span className="badge bg-warning">In-Progress</span>
+                <span className="badge bg-warning">On Mission</span>
               </td>
               <td>N/A</td>
               <td>
@@ -52,14 +51,14 @@ const RequestList = () => {
             </tr>
             <tr>
               <td>02</td>
-              <td>RDRR1002</td>
-              <td>Priyanka Mohan</td>
-              <td>Shailesh Naik</td>
+              <td>MSN1002</td>
+              <td>Nick Fury</td>
+              <td>Captain America</td>
               <td>07/01/2024</td>
               <td>
-                <span className="badge bg-success">Approved</span>
+                <span className="badge bg-success">Completed</span>
               </td>
-              <td>Completed</td>
+              <td>Mission accomplished</td>
               <td>
                 <div className="actions">
                   <NavLink to="/requests/view" className="btn btnView">
@@ -76,15 +75,14 @@ const RequestList = () => {
             </tr>
             <tr>
               <td>03</td>
-              <td>RDRR1003</td>
-              <td>Priyanka Mohan</td>
-              <td>Shailesh Naik</td>
+              <td>MSN1003</td>
+              <td>Nick Fury</td>
+              <td>Black Widow</td>
               <td>07/01/2024</td>
               <td>
-                {" "}
-                <span className="badge bg-danger">Rejected</span>
+                <span className="badge bg-danger">Failed</span>
               </td>
-              <td>Rejected</td>
+              <td>Mission failed - target escaped</td>
               <td>
                 <div className="actions">
                   <NavLink to="/requests/view" className="btn btnView">
@@ -103,20 +101,18 @@ const RequestList = () => {
         </table>
       </div>
 
-      {/* Add Comment */}
-      <Offcanvas show={show} onHide={handleClose} placement="bottom" name="Add Comment">
+      {/* Comments Offcanvas */}
+      <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Add Comment</Offcanvas.Title>
+          <Offcanvas.Title>Mission Comments</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Text Field to appear on Click of any Notification */}
-          <Form.Group className="mb-3">
-            <Form.Label>Comments</Form.Label>
-            <Form.Control as="textarea" rows={3} type="text" placeholder="" />
-          </Form.Group>
-          <Form.Group className="mb-3 text-end">
-            <button className="btn btn-primary">Save</button>
-          </Form.Group>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Add Comment</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
+          </Form>
         </Offcanvas.Body>
       </Offcanvas>
     </>

@@ -19,7 +19,12 @@
         margin-right: 30px;
 
         img {
-            height: 54px;
+            height: auto;
+            max-width: 250px;
+
+            @include media-breakpoint-down(lg) {
+                max-width: 190px;
+            }
         }
     }
 

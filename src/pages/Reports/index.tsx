@@ -66,7 +66,7 @@ const ReportsPage = () => {
             <Nav className="nav-alt" variant="tabs">
               <Nav.Item>
                 <Nav.Link eventKey="first">
-                  Pending Requests <span>12</span>
+                  Pending Requests <span>15</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -95,22 +95,22 @@ const ReportsPage = () => {
           <div className="infoHeader">
             <div className="ihBox">
               <h4>
-                Template ID<span>12345</span>
+                Template ID<span>STARK-2024-001</span>
               </h4>
             </div>
             <div className="ihBox">
               <h4>
-                Template For<span>Reliance Digital</span>
+                Template For<span>Stark Digital</span>
               </h4>
             </div>
             <div className="ihBox">
               <h4>
-                Request Raised By<span>Priyanka Mohan</span>
+                Request Raised By<span>Tony Stark</span>
               </h4>
             </div>
             <div className="ihBox">
               <h4>
-                Date of Request Raised<span>12/01/2024</span>
+                Date of Request Raised<span>05/15/2024</span>
               </h4>
             </div>
             <div className="ihBox">

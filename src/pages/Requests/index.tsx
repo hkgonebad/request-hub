@@ -12,7 +12,7 @@ const RequestsPage = () => {
             <div className="bhTitle">
               <Breadcrumbs bc={null} isActive={false} />
 
-              <h2>My Requests</h2>
+              <h2>Mission Requests</h2>
             </div>
 
             {/* Search */}
@@ -21,7 +21,7 @@ const RequestsPage = () => {
         </div>
       </section>
 
-      {/* My Requests */}
+      {/* Mission Requests */}
       <section className="block pt-0">
         <div className="container">
           <RequestList />

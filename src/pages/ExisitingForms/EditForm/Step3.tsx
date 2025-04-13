@@ -1,34 +1,18 @@
 import { Accordion, Form, Button, InputGroup, Offcanvas, ListGroup } from "react-bootstrap";
-import { FiXCircle } from "react-icons/fi";
+import { FiXCircle, FiPackage, FiTool, FiDroplet } from "react-icons/fi";
 import { useState } from "react";
 import { useWizard } from "react-use-wizard";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-// Notification Data
-const notificationData = [
-  "File attachment incorrect",
-  "Waiting for Inputs",
-  "Work In Progress",
-  "Rejected due to Lorem Ipsum reason",
-  "Accepted, wait for confimation",
-  "Rejected due to eiusmod tempor reason",
-  "Rejected due to Duis aute reason",
-];
+// Resource Data
+const resourceData = ["Iron Man Suit Mark 85", "Vibranium Shield", "Mjolnir", "Infinity Gauntlet", "Tesseract", "Eye of Agamotto", "Pym Particles"];
 
-// Create a Notification component
-const Notification = ({
-  text,
-  handleShow,
-  deleteNotification,
-}: {
-  text: string;
-  handleShow: () => void;
-  deleteNotification: (value: string) => void;
-}) => (
+// Create a Resource component
+const Resource = ({ text, handleShow, deleteResource }: { text: string; handleShow: () => void; deleteResource: (value: string) => void }) => (
   <div className="cnChip" key={text}>
     <span onClick={handleShow}>{text}</span>
-    <FiXCircle className="icon" onClick={() => deleteNotification(text)} />
+    <FiXCircle className="icon" onClick={() => deleteResource(text)} />
   </div>
 );
 
@@ -42,63 +26,60 @@ const Step3 = () => {
 
   // Attach an optional handler
   handleStep(() => {
-    alert("Going to step 4");
+    alert("Resource allocation confirmed");
   });
 
-  // Add notification
-  const addNotification = () => {
+  // Add resource
+  const addResource = () => {
     if (inputValue.trim()) {
       setInputValue("");
-      setNotifications((prevNotifications) => [...prevNotifications, inputValue]);
+      setResources((prevResources) => [...prevResources, inputValue]);
     }
   };
 
-  // Delete notification
-  const deleteNotification = (value: string) => {
-    setNotifications((prevNotifications) => prevNotifications.filter((notification) => notification !== value));
+  // Delete resource
+  const deleteResource = (value: string) => {
+    setResources((prevResources) => prevResources.filter((resource) => resource !== value));
   };
 
-  // Notifications state
-  const [notifications, setNotifications] = useState(notificationData);
+  // Resources state
+  const [resources, setResources] = useState(resourceData);
 
   return (
     <div className="wzStep">
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Custom Notifications</Accordion.Header>
+          <Accordion.Header>Resource Allocation</Accordion.Header>
           <Accordion.Body>
             <div className="wzItem wzItemWell">
               <div className="cNotifications">
-                <h4>Existing Notification</h4>
+                <h4>Available Resources</h4>
                 <div className="cnChips mb-4">
-                  {notifications.map((notification) => (
-                    <Notification
-                      key={notification}
-                      text={notification}
-                      handleShow={handleShow}
-                      deleteNotification={deleteNotification}
-                    />
+                  {resources.map((resource) => (
+                    <Resource key={resource} text={resource} handleShow={handleShow} deleteResource={deleteResource} />
                   ))}
                 </div>
 
-                {/* Notification Comments */}
+                {/* Resource Categories */}
                 <ListGroup className="mb-3">
-                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                  <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                  <ListGroup.Item>
+                    <FiPackage className="icon" /> Equipment
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <FiTool className="icon" /> Tools
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <FiDroplet className="icon" /> Consumables
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <FiPackage className="icon" /> Special Items
+                  </ListGroup.Item>
                 </ListGroup>
 
-                {/* Add Field */}
+                {/* Add Resource */}
                 <InputGroup className="mb-3">
-                  <Form.Control
-                    onClick={(e) => e.currentTarget.select()}
-                    placeholder="Add New Notification"
-                    id="cnInput"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                  />
-                  <Button variant="primary" id="cnNotification" onClick={addNotification}>
+                  <Form.Control onClick={(e) => e.currentTarget.select()} placeholder="Add New Resource" id="cnInput" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                  <Button variant="primary" id="cnNotification" onClick={addResource}>
                     Add
                   </Button>
                 </InputGroup>
@@ -108,19 +89,18 @@ const Step3 = () => {
         </Accordion.Item>
       </Accordion>
 
-      {/* Add Comment */}
-      <Offcanvas show={show} onHide={handleClose} placement="bottom" name="Message Details">
+      {/* Add Resource Details */}
+      <Offcanvas show={show} onHide={handleClose} placement="bottom" name="Resource Details">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Add Comment</Offcanvas.Title>
+          <Offcanvas.Title>Resource Details</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Text Field to appear on Click of any Notification */}
           <Form.Group className="mb-3">
-            <Form.Label>Message Subject</Form.Label>
-            <Form.Control type="text" placeholder="" />
+            <Form.Label>Resource Name</Form.Label>
+            <Form.Control type="text" placeholder="Enter resource name" />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Message Body</Form.Label>
+            <Form.Label>Resource Description</Form.Label>
             <ReactQuill theme="snow" />
           </Form.Group>
           <Form.Group className="mb-3 text-end">

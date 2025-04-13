@@ -7,35 +7,30 @@ const Login = () => {
     <section className="login">
       <div className="loginHero">
         <h1>
-          Welcome to<b>DSR platform</b>
+          Welcome to<b>RequestHub</b>
         </h1>
       </div>
       <div className="loginForm">
         <img src={logo} alt="" />
-        <h1>Login</h1>
-        <p>Enter your credential to access your account</p>
+        <h1>Access Control</h1>
+        <p>Enter your credentials to access the mission control center</p>
 
         <form action="">
           <div className="form-group mb-3">
-            <input
-              type="text"
-              className="form-control"
-              name="username"
-              placeholder="Username / Email ID / Mobile Number"
-            />
+            <input type="text" className="form-control" name="username" placeholder="Agent ID / Email / Mobile Number" />
           </div>
           <div className="form-group mb-3">
-            <input type="passwords" className="form-control" name="password" placeholder="Password" />
+            <input type="password" className="form-control" name="password" placeholder="Access Code" />
           </div>
           <div className="form-group mb-3 text-end forgotText">
             <Link to="" className="text-warning">
-              Forgot Password ?
+              Forgot Access Code?
             </Link>
           </div>
           <Stack direction="horizontal" gap={2} className="btns ">
-            <button className="btn btn-outline-primary flex-fill">Login by Single-Sign-On</button>
+            <button className="btn btn-outline-primary flex-fill">S.H.I.E.L.D. Authentication</button>
             <Link to="/home" className="btn btn-primary">
-              Proceed
+              Access Mission Control
             </Link>
           </Stack>
         </form>

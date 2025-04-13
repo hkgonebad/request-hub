@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>Copyright © IRM 2024 - All rights reserved</p>
+        <p>Copyright © RequestHub 2024 - All rights reserved</p>
       </div>
     </footer>
   );
