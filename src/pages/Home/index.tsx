@@ -1,7 +1,12 @@
 import FormSearch from "@/pages/ExisitingForms/ui/FormSearch";
 import { Form, Pagination } from "react-bootstrap";
-import { FiDownload, FiInfo } from "react-icons/fi";
+import { FiDownload, FiInfo, FiAlertTriangle, FiCheckCircle, FiClock, FiUsers } from "react-icons/fi";
 import DashboardItem from "@/pages/Dashboard/ui/DashboardItem";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend } from "chart.js";
+import { Line, Bar, Doughnut } from "react-chartjs-2";
+
+// Register ChartJS components
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend);
 
 const Home = () => {
   const active = 2;
@@ -13,6 +18,53 @@ const Home = () => {
       </Pagination.Item>
     );
   }
+
+  // Mission Timeline Data
+  const missionTimelineData = {
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      {
+        label: "Active Missions",
+        data: [12, 19, 15, 25, 22, 30, 28],
+        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        tension: 0.4,
+      },
+    ],
+  };
+
+  // Team Performance Data
+  const teamPerformanceData = {
+    labels: ["Avengers", "X-Men", "Fantastic Four", "Guardians"],
+    datasets: [
+      {
+        label: "Mission Success Rate",
+        data: [85, 78, 92, 88],
+        backgroundColor: ["rgba(255, 99, 132, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+      },
+    ],
+  };
+
+  // Resource Allocation Data
+  const resourceAllocationData = {
+    labels: ["Equipment", "Training", "Tech", "Support"],
+    datasets: [
+      {
+        data: [30, 25, 20, 25],
+        backgroundColor: ["rgba(255, 99, 132, 0.8)", "rgba(54, 162, 235, 0.8)", "rgba(255, 206, 86, 0.8)", "rgba(75, 192, 192, 0.8)"],
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "bottom" as const,
+      },
+    },
+  };
 
   return (
     <>
@@ -45,6 +97,14 @@ const Home = () => {
                     </div>
                     <div className="col-md-3">
                       <DashboardItem type="info" value={9} text="Recovery" />
+                    </div>
+                  </div>
+
+                  {/* Mission Timeline */}
+                  <div className="mt-4">
+                    <h4>Weekly Mission Activity</h4>
+                    <div style={{ height: "200px" }}>
+                      <Line data={missionTimelineData} options={chartOptions} />
                     </div>
                   </div>
                 </div>
@@ -83,7 +143,7 @@ const Home = () => {
                   </div>
 
                   {/* Dashboard Items */}
-                  <div className="row ">
+                  <div className="row">
                     <div className="col-md-3">
                       <DashboardItem type="success" value={156} text="Completed" />
                     </div>
@@ -98,6 +158,68 @@ const Home = () => {
                         <div className="diText">
                           <h3>Download</h3>
                           <span>Mission History Report</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Team Performance */}
+                  <div className="mt-4">
+                    <h4>Team Performance</h4>
+                    <div style={{ height: "200px" }}>
+                      <Bar data={teamPerformanceData} options={chartOptions} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Resource Allocation */}
+          <div className="row mt-4">
+            <div className="col-md-12">
+              <div className="card db-card">
+                <div className="card-body">
+                  <div className="blockHeader">
+                    <div className="bhTitle">
+                      <h2>Resource Allocation</h2>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-8">
+                      <div style={{ height: "300px" }}>
+                        <Doughnut data={resourceAllocationData} options={chartOptions} />
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="resource-stats">
+                        <div className="stat-item">
+                          <FiUsers className="icon" />
+                          <div className="stat-info">
+                            <h4>Active Teams</h4>
+                            <p>4 Teams Deployed</p>
+                          </div>
+                        </div>
+                        <div className="stat-item">
+                          <FiCheckCircle className="icon" />
+                          <div className="stat-info">
+                            <h4>Success Rate</h4>
+                            <p>85% Mission Success</p>
+                          </div>
+                        </div>
+                        <div className="stat-item">
+                          <FiClock className="icon" />
+                          <div className="stat-info">
+                            <h4>Response Time</h4>
+                            <p>Avg. 2.5 hours</p>
+                          </div>
+                        </div>
+                        <div className="stat-item">
+                          <FiAlertTriangle className="icon" />
+                          <div className="stat-info">
+                            <h4>Critical Alerts</h4>
+                            <p>3 Active Alerts</p>
+                          </div>
                         </div>
                       </div>
                     </div>
