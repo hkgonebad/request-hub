@@ -5,13 +5,35 @@
     min-height: 100vh;
     background: #fff;
 
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+    }
+
+    @include media-breakpoint-down(lg) {
+        background: url('./assets/img/bg/login-bg.jpg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:before {
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+
     @include media-breakpoint-down(md) {
         flex-direction: column;
+        padding: 0 20px;
+
     }
 
     .loginHero {
-        background: url('./assets/img/bg/login-bg.jpg') no-repeat center center;
-        background-size: cover;
         min-height: 100vh;
         max-width: 868px;
         color: white;
@@ -22,18 +44,37 @@
         display: flex;
         align-items: center;
 
+        @include media-breakpoint-up(lg) {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            background: url('./assets/img/bg/login-bg.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
         @include media-breakpoint-down(md) {
-            min-height: 200px;
+            min-height: initial;
             width: 100%;
-            padding: 0 20px;
+            padding: 20px;
+            background: none;
+            flex: 0;
+            justify-content: center;
+            text-align: center;
         }
 
         h1 {
+            position: relative;
+            z-index: 1;
             font-size: 1rem;
             font-weight: 500;
             text-transform: uppercase;
-            position: absolute;
-            top: 30%;
 
             b {
                 font-size: 2rem;
@@ -50,6 +91,8 @@
         margin: 0 auto;
         flex-basis: 400px;
         border-radius: 6px;
+        z-index: 3;
+        position: relative;
 
         >img {
             margin-bottom: 20px;
@@ -70,94 +113,16 @@
         .forgotText {
             font-size: .875rem;
         }
-    }
 
-    &.loginAlt {
-        min-height: calc(100vh - 125px);
-        background-image: url('./assets/img/bg/loginalt-bg.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        .loginHero {
-            min-height: initial;
-            background-image: none;
-
+        .btns {
             @include media-breakpoint-down(md) {
-                padding: 0;
-                margin-bottom: 20px;
+                flex-direction: column;
             }
 
-            h2 {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                font-weight: 900;
-                color: $secondary;
-                margin-bottom: 1.5rem;
-            }
-
-            h3 {
-                color: $secondary;
-                font-size: 1.125rem;
-                font-weight: 700;
-            }
-
-            h4 {
-                font-size: 1rem;
-                font-weight: 700;
-                text-transform: capitalize;
-            }
-
-            p {
-                font-size: .875rem;
-                font-weight: 500;
+            .btn {
+                width: 100%;
             }
         }
-
-        .loginForm {
-            max-width: initial;
-            flex-basis: initial;
-
-
-
-            .form-group {
-                position: relative;
-
-                .form-check {}
-
-                .otpLabel {
-                    margin-bottom: 6px;
-                }
-
-                .otpResend {
-                    font-size: 11px;
-                    font-weight: 500;
-                    color: #0A2885;
-                    position: absolute;
-                    right: 0;
-                    top: 6px;
-                }
-
-                .otpInput {
-                    justify-content: space-between;
-                }
-
-                label {
-                    font-size: 11px;
-                    font-weight: 700;
-                    color: #666666;
-                    flex: 1;
-                }
-
-                .btn-check-toggle {
-                    border: 1px;
-                    font-size: 1rem;
-                    font-weight: 700;
-                    height: auto;
-                    padding: 0.5rem 1.2rem;
-                }
-            }
-        }
-
     }
+
 }

@@ -28,7 +28,7 @@ const Login = () => {
             </Link>
           </div>
           <Stack direction="horizontal" gap={2} className="btns ">
-            <button className="btn btn-outline-primary flex-fill">S.H.I.E.L.D. Authentication</button>
+            <button className="btn btn-outline-primary flex-fill ">S.H.I.E.L.D. Authentication</button>
             <Link to="/home" className="btn btn-primary">
               Access Mission Control
             </Link>
