@@ -132,6 +132,58 @@
                 }
             }
         }
+
+        .stat-card {
+            background: var(--bs-gray-900);
+            border-color: var(--bs-border-color);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-color: var(--bs-primary);
+            }
+
+            .stat-icon {
+                &.bg-primary {
+                    background-color: rgba(67, 97, 238, 0.2) !important;
+                }
+
+                &.bg-success {
+                    background-color: rgba(46, 196, 182, 0.2) !important;
+                }
+
+                &.bg-info {
+                    background-color: rgba(76, 201, 240, 0.2) !important;
+                }
+
+                &.bg-warning {
+                    background-color: rgba(255, 159, 28, 0.2) !important;
+                }
+
+                .icon {
+                    color: var(--bs-body-color);
+                }
+            }
+
+            .stat-content {
+                .stat-label {
+                    color: var(--bs-gray-400);
+                }
+
+                .stat-value {
+                    color: var(--bs-body-color);
+                }
+
+                small {
+                    color: var(--bs-gray-500);
+                }
+            }
+        }
+
+        .chart-card {
+            background: var(--bs-gray-800);
+        }
     }
 
     // Dashboard Items
@@ -664,17 +716,6 @@
             &.active {
                 background: var(--bs-primary);
             }
-        }
-    }
-
-    // Dashboard styles
-    .dashboard {
-        .stat-card {
-            background: var(--bs-gray-800);
-        }
-
-        .chart-card {
-            background: var(--bs-gray-800);
         }
     }
 

@@ -5,6 +5,57 @@ import DashboardItem from "@/pages/Dashboard/ui/DashboardItem";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend } from "chart.js";
 import { Line, Bar, Doughnut } from "react-chartjs-2";
 
+// Styles for stat cards
+const statCardStyles = `
+  .stat-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .stat-content {
+    flex: 1;
+  }
+  
+  .stat-label {
+    color: #6c757d;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .stat-value {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .bg-primary { background-color: #4361ee !important; }
+  .bg-success { background-color: #2ec4b6 !important; }
+  .bg-info { background-color: #4cc9f0 !important; }
+  .bg-warning { background-color: #ff9f1c !important; }
+`;
+
+// Add styles to document
+const styleSheet = document.createElement("style");
+styleSheet.innerText = statCardStyles;
+document.head.appendChild(styleSheet);
+
 // Register ChartJS components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend);
 
@@ -186,39 +237,75 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                       <div style={{ height: "300px" }}>
                         <Doughnut data={resourceAllocationData} options={chartOptions} />
                       </div>
                     </div>
-                    <div className="col-md-4">
-                      <div className="resource-stats">
-                        <div className="stat-item">
-                          <FiUsers className="icon" />
-                          <div className="stat-info">
-                            <h4>Active Teams</h4>
-                            <p>4 Teams Deployed</p>
+                    <div className="col-md-6">
+                      <div className="row g-3">
+                        <div className="col-md-6">
+                          <div className="card stat-card">
+                            <div className="card-body">
+                              <div className="d-flex align-items-center">
+                                <div className="stat-icon bg-primary">
+                                  <FiUsers />
+                                </div>
+                                <div className="stat-content ms-3">
+                                  <h6 className="stat-label mb-1">Active Teams</h6>
+                                  <h3 className="stat-value mb-0">4 Teams</h3>
+                                  <small className="text-muted">Currently Deployed</small>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className="stat-item">
-                          <FiCheckCircle className="icon" />
-                          <div className="stat-info">
-                            <h4>Success Rate</h4>
-                            <p>85% Mission Success</p>
+                        <div className="col-md-6">
+                          <div className="card stat-card">
+                            <div className="card-body">
+                              <div className="d-flex align-items-center">
+                                <div className="stat-icon bg-success">
+                                  <FiCheckCircle />
+                                </div>
+                                <div className="stat-content ms-3">
+                                  <h6 className="stat-label mb-1">Success Rate</h6>
+                                  <h3 className="stat-value mb-0">85%</h3>
+                                  <small className="text-muted">Mission Success Rate</small>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className="stat-item">
-                          <FiClock className="icon" />
-                          <div className="stat-info">
-                            <h4>Response Time</h4>
-                            <p>Avg. 2.5 hours</p>
+                        <div className="col-md-6">
+                          <div className="card stat-card">
+                            <div className="card-body">
+                              <div className="d-flex align-items-center">
+                                <div className="stat-icon bg-info">
+                                  <FiClock />
+                                </div>
+                                <div className="stat-content ms-3">
+                                  <h6 className="stat-label mb-1">Response Time</h6>
+                                  <h3 className="stat-value mb-0">2.5h</h3>
+                                  <small className="text-muted">Average Response</small>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div className="stat-item">
-                          <FiAlertTriangle className="icon" />
-                          <div className="stat-info">
-                            <h4>Critical Alerts</h4>
-                            <p>3 Active Alerts</p>
+                        <div className="col-md-6">
+                          <div className="card stat-card">
+                            <div className="card-body">
+                              <div className="d-flex align-items-center">
+                                <div className="stat-icon bg-warning">
+                                  <FiAlertTriangle />
+                                </div>
+                                <div className="stat-content ms-3">
+                                  <h6 className="stat-label mb-1">Critical Alerts</h6>
+                                  <h3 className="stat-value mb-0">3</h3>
+                                  <small className="text-muted">Active Alerts</small>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
