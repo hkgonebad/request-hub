@@ -775,6 +775,42 @@
         }
     }
 
+    // Nav styles
+    .nav {
+        .nav-link {
+            color: var(--bs-gray-400);
+
+            span {
+                background: var(--bs-gray-700);
+                color: var(--bs-body-color);
+            }
+
+            &:after {
+                background: var(--bs-primary);
+            }
+
+            &.active,
+            &:hover,
+            &:focus {
+                color: var(--bs-primary);
+                background: var(--bs-gray-800);
+
+                span {
+                    background: var(--bs-teal);
+                }
+
+                &:after {
+                    background: var(--bs-primary);
+                }
+            }
+        }
+
+        &.nav-alt {
+            border-top-color: var(--bs-border-color);
+            border-bottom-color: var(--bs-border-color);
+        }
+    }
+
     // Pagination
     .pagination {
         .page-link {

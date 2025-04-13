@@ -142,19 +142,19 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
               <div className="row">
                 <div className="col-md-4">
                   <Form.Group controlId="missionName" className="mb-3">
-                    <Form.Label htmlFor="missionName">Mission Name</Form.Label>
+                    <Form.Label>Mission Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter mission name" name="name" value={missionFormData.name} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionDescription" className="mb-3">
-                    <Form.Label htmlFor="missionDescription">Mission Description</Form.Label>
+                    <Form.Label>Mission Description</Form.Label>
                     <Form.Control type="text" placeholder="Enter mission description" name="description" value={missionFormData.description} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionType" className="mb-3">
-                    <Form.Label htmlFor="missionType">Mission Type</Form.Label>
+                    <Form.Label>Mission Type</Form.Label>
                     <Form.Select aria-label="Select mission type" name="missionType" value={missionFormData.missionType} onChange={handleMissionChange}>
                       <option value="">Select Type</option>
                       <option value="1">Rescue</option>
@@ -166,7 +166,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionCategory" className="mb-3">
-                    <Form.Label htmlFor="missionCategory">Mission Category</Form.Label>
+                    <Form.Label>Mission Category</Form.Label>
                     <Form.Select aria-label="Select mission category" name="missionCategory" value={missionFormData.missionCategory} onChange={handleMissionChange}>
                       <option value="">Select Category</option>
                       <option value="1">Earth Defense</option>
@@ -178,7 +178,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="threatLevel" className="mb-3">
-                    <Form.Label htmlFor="threatLevel">Threat Level</Form.Label>
+                    <Form.Label>Threat Level</Form.Label>
                     <Form.Select aria-label="Select threat level" name="threatLevel" value={missionFormData.threatLevel} onChange={handleMissionChange}>
                       <option value="">Select Threat Level</option>
                       <option value="1">Level 1 - Minor Threat</option>
@@ -191,7 +191,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionPriority" className="mb-3">
-                    <Form.Label htmlFor="missionPriority">Mission Priority</Form.Label>
+                    <Form.Label>Mission Priority</Form.Label>
                     <Form.Select aria-label="Select mission priority" name="missionPriority" value={missionFormData.missionPriority} onChange={handleMissionChange}>
                       <option value="">Select Priority</option>
                       <option value="1">Low</option>
@@ -203,31 +203,31 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionLogo" className="mb-3">
-                    <Form.Label htmlFor="missionLogo">Mission Logo</Form.Label>
+                    <Form.Label>Mission Logo</Form.Label>
                     <Form.Control type="file" name="logo" onChange={handleFileChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionLeader" className="mb-3">
-                    <Form.Label htmlFor="missionLeader">Mission Leader</Form.Label>
+                    <Form.Label>Mission Leader</Form.Label>
                     <Form.Control type="text" placeholder="Enter mission leader name" name="leader" value={missionFormData.leader} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="missionLocation" className="mb-3">
-                    <Form.Label htmlFor="missionLocation">Mission Location</Form.Label>
+                    <Form.Label>Mission Location</Form.Label>
                     <Form.Control type="text" placeholder="Enter mission location" name="location" value={missionFormData.location} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="launchDate" className="mb-3">
-                    <Form.Label htmlFor="launchDate">Launch Date</Form.Label>
+                    <Form.Label>Launch Date</Form.Label>
                     <Form.Control type="date" name="launchDate" value={missionFormData.launchDate} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="estimatedDuration" className="mb-3">
-                    <Form.Label htmlFor="estimatedDuration">Estimated Duration</Form.Label>
+                    <Form.Label>Estimated Duration</Form.Label>
                     <Form.Control type="text" placeholder="e.g., 48 hours" name="estimatedDuration" value={missionFormData.estimatedDuration} onChange={handleMissionChange} />
                   </Form.Group>
                 </div>
@@ -248,19 +248,19 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
               <div className="row">
                 <div className="col-md-4">
                   <Form.Group controlId="teamName" className="mb-3">
-                    <Form.Label htmlFor="teamName">Team Name</Form.Label>
+                    <Form.Label>Team Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter team name" name="name" value={teamFormData.name} onChange={handleTeamChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamDescription" className="mb-3">
-                    <Form.Label htmlFor="teamDescription">Team Description</Form.Label>
+                    <Form.Label>Team Description</Form.Label>
                     <Form.Control type="text" placeholder="Enter team description" name="description" value={teamFormData.description} onChange={handleTeamChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamType" className="mb-3">
-                    <Form.Label htmlFor="teamType">Team Type</Form.Label>
+                    <Form.Label>Team Type</Form.Label>
                     <Form.Select aria-label="Select team type" name="teamType" value={teamFormData.teamType} onChange={handleTeamChange}>
                       <option value="">Select Type</option>
                       <option value="1">Special Forces</option>
@@ -273,7 +273,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamSize" className="mb-3">
-                    <Form.Label htmlFor="teamSize">Team Size</Form.Label>
+                    <Form.Label>Team Size</Form.Label>
                     <Form.Select aria-label="Select team size" name="teamSize" value={teamFormData.teamSize} onChange={handleTeamChange}>
                       <option value="">Select Size</option>
                       <option value="1">Small (2-5)</option>
@@ -285,7 +285,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="specialization" className="mb-3">
-                    <Form.Label htmlFor="specialization">Specialization</Form.Label>
+                    <Form.Label>Specialization</Form.Label>
                     <Form.Select aria-label="Select specialization" name="specialization" value={teamFormData.specialization} onChange={handleTeamChange}>
                       <option value="">Select Specialization</option>
                       <option value="1">Combat</option>
@@ -298,7 +298,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="equipment" className="mb-3">
-                    <Form.Label htmlFor="equipment">Equipment</Form.Label>
+                    <Form.Label>Equipment</Form.Label>
                     <Form.Select aria-label="Select equipment" name="equipment" value={teamFormData.equipment} onChange={handleTeamChange}>
                       <option value="">Select Equipment</option>
                       <option value="1">Standard</option>
@@ -310,7 +310,7 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="trainingLevel" className="mb-3">
-                    <Form.Label htmlFor="trainingLevel">Training Level</Form.Label>
+                    <Form.Label>Training Level</Form.Label>
                     <Form.Select aria-label="Select training level" name="trainingLevel" value={teamFormData.trainingLevel} onChange={handleTeamChange}>
                       <option value="">Select Training Level</option>
                       <option value="1">Basic</option>
@@ -322,25 +322,25 @@ const CreateUnitModal = ({ show, onHide, title = "Create New", formType = FormTy
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamLogo" className="mb-3">
-                    <Form.Label htmlFor="teamLogo">Team Logo</Form.Label>
+                    <Form.Label>Team Logo</Form.Label>
                     <Form.Control type="file" name="logo" onChange={handleFileChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamLeader" className="mb-3">
-                    <Form.Label htmlFor="teamLeader">Team Leader</Form.Label>
+                    <Form.Label>Team Leader</Form.Label>
                     <Form.Control type="text" placeholder="Enter team leader name" name="leader" value={teamFormData.leader} onChange={handleTeamChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="teamLocation" className="mb-3">
-                    <Form.Label htmlFor="teamLocation">Team Location</Form.Label>
+                    <Form.Label>Team Location</Form.Label>
                     <Form.Control type="text" placeholder="Enter team location" name="location" value={teamFormData.location} onChange={handleTeamChange} />
                   </Form.Group>
                 </div>
                 <div className="col-md-4">
                   <Form.Group controlId="availability" className="mb-3">
-                    <Form.Label htmlFor="availability">Availability</Form.Label>
+                    <Form.Label>Availability</Form.Label>
                     <Form.Select aria-label="Select availability" name="availability" value={teamFormData.availability} onChange={handleTeamChange}>
                       <option value="">Select Availability</option>
                       <option value="1">Immediate</option>
