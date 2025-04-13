@@ -1,0 +1,378 @@
+// Dark mode styles
+[data-bs-theme="dark"] {
+
+    // Base styles
+    body {
+        background-color: var(--bs-dark);
+        color: var(--bs-body-color);
+    }
+
+    // Header styles
+    .mainHeader {
+        background: var(--bs-dark);
+        border-bottom-color: var(--bs-border-color);
+
+        .myRequest {
+            background: var(--bs-gray-800);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+        }
+
+        .notification,
+        .profile {
+            .dropdown-menu {
+                background: var(--bs-gray-800);
+                border-color: var(--bs-border-color);
+            }
+
+            .notification-item {
+                border-bottom-color: var(--bs-border-color);
+
+                &.unread {
+                    background: var(--bs-gray-700);
+                }
+            }
+        }
+    }
+
+    // Login page
+    .loginPage {
+        background: var(--bs-dark);
+
+        .login-form {
+            background: var(--bs-gray-800);
+
+            .form-floating {
+                label {
+                    color: var(--bs-body-color);
+                }
+            }
+        }
+
+        .login-footer {
+            color: var(--bs-body-color);
+        }
+    }
+
+    // Existing Forms
+    .existing-forms {
+        .form-card {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+        }
+
+        .form-status {
+            background: var(--bs-gray-700);
+
+            &.active {
+                background: var(--bs-primary);
+            }
+        }
+
+        .form-meta {
+            color: var(--bs-body-secondary);
+        }
+    }
+
+    // Edit Form Steps
+    .form-steps {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+
+        .step-content {
+            background: var(--bs-gray-800);
+        }
+
+        .form-section {
+            border-color: var(--bs-border-color);
+            background: var(--bs-gray-900);
+        }
+
+        .section-header {
+            border-bottom-color: var(--bs-border-color);
+        }
+
+        .business-unit-card {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+
+            &.selected {
+                border-color: var(--bs-primary);
+            }
+        }
+
+        .attachment-box {
+            background: var(--bs-gray-900);
+            border-color: var(--bs-border-color);
+        }
+
+        .ql-toolbar,
+        .ql-container {
+            background: var(--bs-gray-900);
+            border-color: var(--bs-border-color) !important;
+
+            .ql-stroke {
+                stroke: var(--bs-body-color) !important;
+            }
+
+            .ql-fill {
+                fill: var(--bs-body-color) !important;
+            }
+        }
+    }
+
+    // Request View
+    .request-view {
+        .request-header {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .request-content {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .request-timeline {
+            .timeline-item {
+                border-color: var(--bs-border-color);
+
+                &::before {
+                    background: var(--bs-gray-700);
+                }
+
+                &.active::before {
+                    background: var(--bs-primary);
+                }
+            }
+        }
+
+        .comment-section {
+            background: var(--bs-gray-900);
+            border-color: var(--bs-border-color);
+        }
+    }
+
+    // Reports
+    .reports-page {
+        .report-filters {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .report-table {
+            background: var(--bs-gray-800);
+
+            th,
+            td {
+                border-color: var(--bs-border-color);
+            }
+        }
+
+        .report-summary {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .status-badge {
+            &.pending {
+                background: var(--bs-gray-700);
+            }
+
+            &.approved {
+                background: var(--bs-success);
+            }
+
+            &.rejected {
+                background: var(--bs-danger);
+            }
+        }
+    }
+
+    // Card styles
+    .card {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+    }
+
+    // Form styles
+    .form-control,
+    .form-select {
+        background: var(--bs-gray-900);
+        border-color: var(--bs-border-color);
+        color: var(--bs-body-color);
+
+        &:disabled {
+            background: var(--bs-gray-800);
+        }
+    }
+
+    // Table styles
+    .table {
+        --bs-table-bg: var(--bs-gray-800);
+        --bs-table-striped-bg: var(--bs-gray-700);
+        --bs-table-hover-bg: var(--bs-gray-600);
+        border-color: var(--bs-border-color);
+        color: var(--bs-body-color);
+    }
+
+    // Steps styles
+    .steps {
+        .step {
+            background: var(--bs-gray-800);
+
+            &.active {
+                background: var(--bs-primary);
+            }
+        }
+    }
+
+    // Dashboard styles
+    .dashboard {
+        .stat-card {
+            background: var(--bs-gray-800);
+        }
+
+        .chart-card {
+            background: var(--bs-gray-800);
+        }
+    }
+
+    // Client detail styles
+    .client-detail {
+        .info-card {
+            background: var(--bs-gray-800);
+        }
+    }
+
+    // Request styles
+    .request-card {
+        background: var(--bs-gray-800);
+
+        &:hover {
+            background: var(--bs-gray-700);
+        }
+    }
+
+    // Report styles
+    .report-card {
+        background: var(--bs-gray-800);
+
+        .status {
+            &.pending {
+                background: var(--bs-gray-700);
+            }
+        }
+    }
+
+    // Blockheader styles
+    .blockHeader {
+        border-bottom-color: var(--bs-border-color);
+    }
+
+    // Button styles
+    .btn-light {
+        background: var(--bs-gray-700);
+        border-color: var(--bs-gray-600);
+        color: var(--bs-body-color);
+
+        &:hover {
+            background: var(--bs-gray-600);
+            border-color: var(--bs-gray-500);
+        }
+    }
+
+    // Dropdown styles
+    .dropdown-menu {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+
+        .dropdown-item {
+            color: var(--bs-body-color);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+        }
+    }
+
+    // Modal styles
+    .modal-content {
+        background: var(--bs-gray-800);
+
+        .modal-header {
+            border-bottom-color: var(--bs-border-color);
+        }
+
+        .modal-footer {
+            border-top-color: var(--bs-border-color);
+        }
+    }
+
+    // Custom scrollbar
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bs-gray-900);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--bs-gray-700);
+        border-radius: 4px;
+
+        &:hover {
+            background: var(--bs-gray-600);
+        }
+    }
+
+    // Nav tabs
+    .nav-tabs {
+        border-color: var(--bs-border-color);
+
+        .nav-link {
+            color: var(--bs-body-color);
+
+            &:hover {
+                border-color: var(--bs-border-color);
+            }
+
+            &.active {
+                background: var(--bs-gray-800);
+                border-color: var(--bs-border-color);
+                border-bottom-color: transparent;
+                color: var(--bs-primary);
+            }
+        }
+    }
+
+    // Pagination
+    .pagination {
+        .page-link {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+            color: var(--bs-body-color);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+
+            &.active {
+                background: var(--bs-primary);
+                border-color: var(--bs-primary);
+            }
+        }
+    }
+}

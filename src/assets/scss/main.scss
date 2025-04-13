@@ -3,6 +3,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
 
+// Dark mode
+@import 'layout/dark';
+
 // Other Imports
 @import 'layout/default';
 @import 'layout/header';
