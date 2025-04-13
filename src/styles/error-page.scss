@@ -67,7 +67,7 @@
 .error-image-animate {
     height: 100%;
     min-height: 500px;
-    background: url('/assets/img/mjolnir.jpg') center/cover no-repeat;
+    background: url('assets/img/mjolnir.jpg') center/cover no-repeat;
     position: relative;
     overflow: hidden;
 
@@ -83,6 +83,7 @@
 
     .lightning-overlay {
         position: absolute;
+        z-index: 2;
         top: 0;
         left: 0;
         right: 0;
