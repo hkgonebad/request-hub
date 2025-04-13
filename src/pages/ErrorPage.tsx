@@ -1,12 +1,12 @@
 import { useRouteError, isRouteErrorResponse } from "react-router-dom";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { FiArrowLeft } from "react-icons/fi";
 
 const ErrorPage = () => {
-  // you don't need to explicitly set error to `unknown`
   const error: unknown = useRouteError();
   let errorMessage;
 
   if (isRouteErrorResponse(error)) {
-    // error is type `ErrorResponse`
     errorMessage = error.statusText;
   } else if (error instanceof Error) {
     errorMessage = error.message;
@@ -14,20 +14,35 @@ const ErrorPage = () => {
     errorMessage = error;
   } else {
     console.error(error);
-    errorMessage = "Unknown error";
+    errorMessage = "You are not worthy!";
   }
 
   return (
-    <section
-      id="error-page"
-      className="d-flex flex-col gap-8 justify-center items-center h-screen"
-    >
-      <h1 className="text-4xl font-bold">Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p className="text-slate-400">
-        <i>{errorMessage}</i>
-      </p>
-    </section>
+    <Container fluid className="error-page-container p-0">
+      <Row className="flex-wrapper no-pad g-0">
+        <Col md={6} className="flex-col">
+          <div className="error-copy p-5">
+            <h1 className="display-4 fw-bold mb-4">404</h1>
+            <h4 className="dynamic-msg mb-3 text-uppercase">Whosoever holds this hammer...</h4>
+            <p className="lead mb-4">
+              {errorMessage}
+              <br />
+              Perhaps you should try a different path, mortal.
+            </p>
+            <div className="d-flex gap-3">
+              <Button href="/" variant="primary" className="d-flex align-items-center gap-2 btn-marvel">
+                <FiArrowLeft /> Return to Earth (Home)
+              </Button>
+            </div>
+          </div>
+        </Col>
+        <Col md={6} className="flex-col no-pad toAnimate">
+          <div className="error-image-animate">
+            <div className="lightning-overlay"></div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
