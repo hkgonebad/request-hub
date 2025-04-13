@@ -35,7 +35,7 @@ const useUserStore = create<UserState>((set) => ({
     email: "tony.stark@starkenterprises.com",
     role: "Genius",
     department: "Research and Development",
-    avatar: "https://randomuser.me/api/portraits/thumb/men/9.jpg",
+    avatar: "src/assets/img/user.jpg",
     lastActive: new Date(),
   },
   notifications: generateSampleNotifications(),

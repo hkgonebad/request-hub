@@ -7,6 +7,166 @@
         color: var(--bs-body-color);
     }
 
+    // Reports - Info Header
+    .infoHeader {
+        border-color: var(--bs-border-color);
+        background: var(--bs-gray-800);
+
+        .ihBox {
+            h4 {
+                color: var(--bs-gray-500);
+
+                span {
+                    color: var(--bs-body-color);
+                }
+            }
+        }
+    }
+
+    // Page - Block Header
+    .blockHeader {
+        .bhTitle {
+            .breadcrumbs {
+                color: var(--bs-gray-500);
+
+                a {
+                    color: var(--bs-gray-500);
+                }
+
+                .count {
+                    background-color: var(--bs-gray-600);
+                }
+            }
+        }
+
+        .bhForm {
+            .input-group {
+                background: var(--bs-gray-800);
+                border-color: var(--bs-border-color);
+
+                .form-control {
+                    background: var(--bs-gray-800);
+                }
+            }
+
+            .form-select {
+                background-color: var(--bs-gray-800);
+                border-color: var(--bs-border-color);
+            }
+
+            &.bhForm-Multi {
+                .bhLabel {
+                    color: var(--bs-gray-500);
+                }
+            }
+        }
+    }
+
+    // Page - DC Card
+    .dc-card {
+        border-color: var(--bs-border-color);
+        background: var(--bs-gray-800);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        .card-body {
+            .card-image {
+                background: var(--bs-gray-700);
+            }
+        }
+
+        .card-footer {
+            background: var(--bs-gray-700);
+
+            p {
+                color: var(--bs-body-color);
+
+                span {
+                    background: var(--bs-gray-600);
+                }
+            }
+        }
+
+        &:hover {
+            border-color: var(--bs-primary);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    // Footer
+    .footer {
+        background: var(--bs-gray-800);
+
+        p {
+            color: var(--bs-body-color);
+        }
+    }
+
+    // Dashboard
+    .dashboard {
+        .db-card {
+            border-color: var(--bs-border-color);
+            background: var(--bs-gray-800);
+
+            &.db-cardAlt {
+                border-color: var(--bs-border-color);
+                background: var(--bs-gray-700);
+            }
+        }
+
+        .dr-card {
+            border-color: var(--bs-border-color);
+            background: var(--bs-gray-800);
+
+            &.dr-cardAlt {
+                border-color: var(--bs-border-color);
+                background: var(--bs-gray-700);
+            }
+
+            .card-body {
+                h4 {
+                    color: var(--bs-body-color);
+
+                    span {
+                        color: var(--bs-gray-500);
+                    }
+                }
+            }
+        }
+    }
+
+    // Dashboard Items
+    .dItem {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+        color: var(--bs-body-color);
+
+        &.dItemAlt {
+            .diImg {
+                background: var(--bs-gray-700);
+
+                img,
+                .icon {
+                    color: var(--bs-primary);
+                }
+            }
+
+            .diText {
+                span {
+                    color: var(--bs-gray-500);
+                }
+            }
+        }
+
+        &:hover,
+        &.active {
+            background: var(--bs-gray-700);
+
+            &.dItemBg {
+                box-shadow: 0 0px 0px inset var(--bs-primary);
+            }
+        }
+    }
+
     // Header styles
     .mainHeader {
         background: var(--bs-dark);
@@ -372,6 +532,238 @@
             &.active {
                 background: var(--bs-primary);
                 border-color: var(--bs-primary);
+            }
+        }
+    }
+
+    // Steps Wizard
+    .wizard {
+        border-color: var(--bs-border-color);
+        background: var(--bs-gray-800);
+
+        .btn-check-toggle {
+            background: var(--bs-gray-900);
+
+            &:hover {
+                background: var(--bs-gray-700);
+            }
+        }
+
+        .wizardNav {
+            .nav {
+                border-bottom-color: var(--bs-border-color);
+                background: var(--bs-gray-900);
+
+                &:before {
+                    background: var(--bs-gray-900);
+                }
+
+                .btn {
+                    color: var(--bs-gray-500);
+
+                    span {
+                        background: var(--bs-gray-700);
+                        color: var(--bs-gray-400);
+                    }
+
+                    &:not(:last-child):after {
+                        background: var(--bs-gray-700);
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &.active {
+                        color: var(--bs-body-color);
+
+                        span {
+                            background: var(--bs-primary);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .wizardHeader {
+                background: var(--bs-gray-800);
+
+                .wzMeta {
+                    border-color: var(--bs-border-color);
+                    background: var(--bs-gray-900);
+
+                    b {
+                        color: var(--bs-gray-500);
+
+                        span {
+                            color: var(--bs-body-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .wzStep {
+            border-top-color: var(--bs-border-color);
+
+            .accordion {
+                background: var(--bs-gray-800);
+
+                .accordion-item {
+                    .accordion-button {
+                        background: var(--bs-gray-800);
+                        color: var(--bs-body-color);
+                    }
+                }
+            }
+
+            .wzItem {
+                border-color: var(--bs-border-color);
+                background: var(--bs-gray-800);
+
+                >.icon {
+                    color: var(--bs-gray-500);
+                }
+
+                >span {
+                    color: var(--bs-body-color);
+                }
+
+                .form-group {
+                    label {
+                        color: var(--bs-body-color);
+                    }
+                }
+
+                &.wzItemWell {
+                    background: var(--bs-gray-900);
+                }
+
+                .successMessage {
+                    .smContent {
+                        h3 {
+                            color: var(--bs-success);
+                        }
+
+                        p {
+                            color: var(--bs-body-color);
+
+                            b {
+                                color: var(--bs-primary);
+                            }
+                        }
+
+                        b {
+                            color: var(--bs-body-color);
+                        }
+                    }
+                }
+
+                h4 {
+                    color: var(--bs-gray-500);
+                }
+            }
+        }
+
+        .wizardFooter {
+            background: var(--bs-gray-900);
+            border-top-color: var(--bs-border-color);
+
+            .btns {
+                .btn {
+                    &.btn-outline-light {
+                        color: var(--bs-gray-500);
+                        border-color: var(--bs-border-color);
+                        background: var(--bs-gray-800);
+
+                        &:hover {
+                            color: #fff;
+                            background: var(--bs-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Client Detail
+    .cdAction {
+        .btn {
+            &:not(:last-child):after {
+                background: var(--bs-border-color);
+            }
+        }
+    }
+
+    .clientDetail {
+        .cdInfo {
+            .cdiBox {
+                background: var(--bs-primary);
+
+                h3 {
+                    color: #fff;
+
+                    span {
+                        color: var(--bs-gray-300);
+                    }
+                }
+
+                .cdiIcon {
+                    background: var(--bs-gray-700);
+                    color: var(--bs-body-color);
+                }
+
+                &.cdiLogo {
+                    background: var(--bs-gray-800);
+                    border-color: var(--bs-border-color);
+                }
+            }
+        }
+    }
+
+    .cdForm {
+        border-color: var(--bs-border-color);
+        background: var(--bs-gray-800);
+
+        h4 {
+            color: var(--bs-body-color);
+        }
+
+        .dropzone {
+            border-color: var(--bs-border-color);
+            background: var(--bs-gray-900);
+            color: var(--bs-primary);
+
+            .icon {
+                color: var(--bs-primary);
+            }
+
+            p {
+                color: var(--bs-body-color);
+            }
+
+            &:hover {
+                background: var(--bs-gray-800);
+                border-color: var(--bs-primary);
+            }
+        }
+    }
+
+    // Notifications in Steps
+    .cNotifications {
+        .cnChips {
+            .cnChip {
+                border-color: var(--bs-border-color);
+                background: var(--bs-gray-800);
+                color: var(--bs-body-color);
+
+                .icon {
+                    color: var(--bs-danger);
+                }
+
+                &:hover {
+                    background: var(--bs-gray-700);
+                    border-color: var(--bs-primary);
+                }
             }
         }
     }

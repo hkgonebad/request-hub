@@ -26,7 +26,7 @@ const Profile = () => {
                     <img src={profile.avatar} alt={profile.name} className="rounded-circle img-thumbnail shadow" style={{ width: "150px", height: "150px", objectFit: "cover" }} />
                   </div>
                   <h2 className="fw-bold mb-1">{profile.name}</h2>
-                  <p className="text-muted mb-2">{profile.role}</p>
+                  <p className="mb-2 badge bg-primary">{profile.role}</p>
                   <p className="text-muted mb-3">{profile.department}</p>
                   <div className="d-flex justify-content-center gap-4 profile-stats">
                     <div className="stat-item text-center p-3 rounded-3 bg-body-tertiary">
