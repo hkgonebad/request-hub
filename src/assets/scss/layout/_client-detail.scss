@@ -62,6 +62,13 @@
                 border-radius: 50%;
                 height: 42px;
                 width: 42px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
 
                 svg {
                     width: 30px;
@@ -74,7 +81,12 @@
                 background: #F7F9FD;
                 border: #A6CDCD 1px solid;
 
-                img {}
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
