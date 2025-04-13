@@ -1,5 +1,5 @@
-import { useRouteError, isRouteErrorResponse } from "react-router-dom";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { useRouteError, isRouteErrorResponse, Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import { FiArrowLeft } from "react-icons/fi";
 
 const ErrorPage = () => {
@@ -30,9 +30,9 @@ const ErrorPage = () => {
               Perhaps you should try a different path, mortal.
             </p>
             <div className="d-flex gap-3">
-              <Button href="/" variant="primary" className="d-flex align-items-center gap-2 btn-marvel">
+              <Link to="/" className="btn btn-primary d-flex align-items-center gap-2 btn-marvel">
                 <FiArrowLeft /> Return to Earth (Home)
-              </Button>
+              </Link>
             </div>
           </div>
         </Col>

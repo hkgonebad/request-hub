@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 // Layouts
 import AuthLayout from "@/layouts/Auth";
@@ -18,7 +18,7 @@ import ReportsPage from "@/pages/Reports";
 import Profile from "@/pages/Profile";
 import Notifications from "@/pages/Notifications";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <AuthLayout />,
