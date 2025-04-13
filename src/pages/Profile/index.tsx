@@ -20,21 +20,23 @@ const Profile = () => {
         <div className="row">
           <div className="col-md-12 col-lg-4">
             <Card className="profile-card">
-              <Card.Body className="text-center">
-                <div className="profile-avatar">
-                  <img src={profile.avatar} alt={profile.name} />
-                </div>
-                <h3>{profile.name}</h3>
-                <p className="text-muted">{profile.role}</p>
-                <p className="text-muted">{profile.department}</p>
-                <div className="profile-stats">
-                  <div className="stat-item">
-                    <h4>42</h4>
-                    <p>Total Requests</p>
+              <Card.Body>
+                <div className="text-center mb-4">
+                  <div className="profile-avatar mb-3">
+                    <img src={profile.avatar} alt={profile.name} className="rounded-circle img-thumbnail shadow" style={{ width: "150px", height: "150px", objectFit: "cover" }} />
                   </div>
-                  <div className="stat-item">
-                    <h4>28</h4>
-                    <p>Completed</p>
+                  <h2 className="fw-bold mb-1">{profile.name}</h2>
+                  <p className="text-muted mb-2">{profile.role}</p>
+                  <p className="text-muted mb-3">{profile.department}</p>
+                  <div className="d-flex justify-content-center gap-4 profile-stats">
+                    <div className="stat-item text-center p-3 rounded-3 bg-body-tertiary">
+                      <h3 className="fw-bold mb-1">42</h3>
+                      <p className="text-muted mb-0 small">Total Requests</p>
+                    </div>
+                    <div className="stat-item text-center p-3 rounded-3 bg-body-tertiary">
+                      <h3 className="fw-bold mb-1">28</h3>
+                      <p className="text-muted mb-0 small">Completed</p>
+                    </div>
                   </div>
                 </div>
               </Card.Body>

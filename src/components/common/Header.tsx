@@ -1,14 +1,16 @@
-import { Dropdown, Stack } from "react-bootstrap";
+import { Dropdown, Stack, Form } from "react-bootstrap";
 import logo from "@/assets/img/logo.webp";
 import user from "@/assets/img/user.jpg";
-import { FiBell } from "react-icons/fi";
+import { FiBell, FiMoon, FiSun } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
 import useUserStore from "@/store/userStore";
+import useThemeStore from "@/store/themeStore";
 import { format } from "date-fns";
 
 const Header = () => {
   const { notifications, unreadCount, markNotificationAsRead } = useUserStore();
+  const { theme, toggleTheme } = useThemeStore();
 
   const handleMarkAsRead = (id: string) => {
     markNotificationAsRead(id);
@@ -76,6 +78,12 @@ const Header = () => {
                 <NavLink to="/notifications" className="dropdown-item">
                   Notifications
                 </NavLink>
+                <Dropdown.Divider />
+                <div className="px-3 py-2 d-flex align-items-center gap-2">
+                  {theme === "dark" ? <FiMoon className="icon" /> : <FiSun className="icon" />}
+                  <Form.Check type="switch" id="theme-switch" label={theme === "dark" ? "Dark Mode" : "Light Mode"} checked={theme === "dark"} onChange={toggleTheme} />
+                </div>
+                <Dropdown.Divider />
                 <NavLink to="/" className="dropdown-item">
                   Logout
                 </NavLink>
