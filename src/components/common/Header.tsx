@@ -1,11 +1,18 @@
 import { Dropdown, Stack } from "react-bootstrap";
 import logo from "@/assets/img/logo.webp";
 import { FiBell } from "react-icons/fi";
-
-import Menu from "./Menu";
 import { NavLink } from "react-router-dom";
+import Menu from "./Menu";
+import useUserStore from "@/store/userStore";
+import { format } from "date-fns";
 
 const Header = () => {
+  const { notifications, unreadCount, markNotificationAsRead } = useUserStore();
+
+  const handleMarkAsRead = (id: string) => {
+    markNotificationAsRead(id);
+  };
+
   return (
     <header className="mainHeader">
       <div className="container">
@@ -29,38 +36,42 @@ const Header = () => {
             <Dropdown className="notification">
               <Dropdown.Toggle bsPrefix="noBtn" id="notification" variant="none">
                 <FiBell className="icon" />
-                <span>4</span>
+                {unreadCount > 0 && <span>{unreadCount}</span>}
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end" className="notifications">
-                <div className="notification-item">
-                  <p>
-                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum soluta delectus accusantium
-                    sint praesentium autem.
-                  </p>
-                </div>
-                <div className="notification-item">
-                  <p>
-                    Notification 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi recusandae soluta reprehenderit eaque iste, magnam quia quisquam iusto autem deserunt eum! Saepe excepturi laborum soluta delectus accusantium
-                    sint praesentium autem.
-                  </p>
-                </div>
-                {/* <Dropdown.Item href="#/action-2">Notification 2</Dropdown.Item> */}
+                {notifications.length === 0 ? (
+                  <div className="notification-item">
+                    <p>No new notifications</p>
+                  </div>
+                ) : (
+                  notifications.map((notification) => (
+                    <div key={notification.id} className={`notification-item ${notification.read ? "read" : "unread"}`}>
+                      <p>{notification.message}</p>
+                      <small className="text-muted">{format(notification.timestamp, "PPp")}</small>
+                      {!notification.read && (
+                        <button className="btn btn-link btn-sm" onClick={() => handleMarkAsRead(notification.id)}>
+                          Mark as Read
+                        </button>
+                      )}
+                    </div>
+                  ))
+                )}
               </Dropdown.Menu>
             </Dropdown>
 
             {/* Profile Dropdown */}
             <Dropdown className="profile">
               <Dropdown.Toggle bsPrefix="noBtn" id="profile" variant="none">
-                <img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" />
+                <img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" alt="Profile" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end">
                 <NavLink to="/profile" className="dropdown-item">
                   Profile
                 </NavLink>
-                <NavLink to="/settings" className="dropdown-item">
-                  Settings
+                <NavLink to="/notifications" className="dropdown-item">
+                  Notifications
                 </NavLink>
                 <NavLink to="/" className="dropdown-item">
                   Logout

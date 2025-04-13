@@ -15,6 +15,8 @@ import Dashboard from "@/pages/Dashboard";
 import ViewRequest from "@/pages/Requests/View";
 import DashboardSpoc from "@/pages/Dashboard/DashboardSpoc";
 import ReportsPage from "@/pages/Reports";
+import Profile from "@/pages/Profile";
+import Notifications from "@/pages/Notifications";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +77,14 @@ const router = createBrowserRouter([
       {
         path: "/reports",
         element: <ReportsPage />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/notifications",
+        element: <Notifications />,
       },
     ],
   },
