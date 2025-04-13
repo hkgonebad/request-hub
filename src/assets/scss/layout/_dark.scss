@@ -406,6 +406,178 @@
         }
     }
 
+    // Request View Card
+    .rv-card {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+
+        .card-header {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .card-body {
+            background: var(--bs-gray-900);
+        }
+
+        .card-footer {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        label {
+            color: var(--bs-gray-400);
+        }
+
+        .rvReadonly {
+            label {
+                color: var(--bs-gray-500);
+            }
+
+            p {
+                color: var(--bs-body-color);
+            }
+        }
+
+        .form-control {
+            background: var(--bs-gray-900);
+            border-color: var(--bs-border-color);
+            color: var(--bs-body-color);
+
+            &::placeholder {
+                color: var(--bs-gray-500);
+            }
+        }
+
+        .btn-outline-primary {
+            color: var(--bs-primary);
+            border-color: var(--bs-primary);
+
+            &:hover {
+                background-color: var(--bs-primary);
+                color: #fff;
+            }
+        }
+    }
+
+    // Request Journey Card
+    .rj-card {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+        box-shadow: 0px 0px 15px 0px rgba(176, 165, 216, 0.2) inset;
+
+        .card-header {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+        }
+
+        .card-body {
+            background: var(--bs-gray-900);
+        }
+
+        .rjStep {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+
+            &:nth-child(odd) {
+                background: var(--bs-gray-700);
+            }
+
+            b {
+                background: var(--bs-gray-800);
+                border-color: var(--bs-border-color);
+                color: var(--bs-body-color);
+
+                &:after,
+                &:before {
+                    border-color: var(--bs-border-color);
+                }
+            }
+
+            h4 {
+                color: var(--bs-body-color);
+            }
+
+            p {
+                color: var(--bs-gray-400);
+            }
+
+            >span {
+                background: var(--bs-primary);
+                color: #fff;
+            }
+
+            .rjStatus {
+                h4 {
+                    color: var(--bs-body-color);
+                }
+
+                span {
+                    color: var(--bs-body-color);
+                }
+            }
+        }
+    }
+
+    // Modal styles
+    .modal-content {
+        background: var(--bs-gray-800);
+        border-color: var(--bs-border-color);
+
+        .modal-header {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+            color: var(--bs-body-color);
+
+            .modal-title {
+                color: var(--bs-body-color);
+            }
+
+            .btn-close {
+                filter: invert(1) grayscale(100%) brightness(200%);
+            }
+        }
+
+        .modal-body {
+            background: var(--bs-gray-800);
+            color: var(--bs-body-color);
+
+            .cdItem {
+                background: var(--bs-gray-700);
+                border-color: var(--bs-border-color);
+
+                .icon {
+                    color: var(--bs-primary);
+                }
+
+                .cdText {
+                    h4 {
+                        color: var(--bs-body-color);
+                    }
+
+                    span {
+                        color: var(--bs-gray-400);
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            background: var(--bs-gray-800);
+            border-color: var(--bs-border-color);
+
+            .btn-secondary {
+                background: var(--bs-gray-700);
+                border-color: var(--bs-border-color);
+                color: var(--bs-body-color);
+
+                &:hover {
+                    background: var(--bs-gray-600);
+                }
+            }
+        }
+    }
+
     // Reports
     .reports-page {
         .report-filters {
@@ -561,19 +733,6 @@
             &:hover {
                 background: var(--bs-gray-700);
             }
-        }
-    }
-
-    // Modal styles
-    .modal-content {
-        background: var(--bs-gray-800);
-
-        .modal-header {
-            border-bottom-color: var(--bs-border-color);
-        }
-
-        .modal-footer {
-            border-top-color: var(--bs-border-color);
         }
     }
 
