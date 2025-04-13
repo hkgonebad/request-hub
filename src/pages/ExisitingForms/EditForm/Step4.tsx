@@ -1,8 +1,9 @@
+import { SubBusinessUnit } from "@/models/interfaces";
 import { Accordion, Card, ListGroup } from "react-bootstrap";
 import { useWizard } from "react-use-wizard";
 import { FiUsers, FiZap, FiPackage, FiMapPin, FiClock } from "react-icons/fi";
 
-const Step4 = () => {
+const Step4 = ({ item }: { item: SubBusinessUnit }) => {
   const { handleStep } = useWizard();
 
   // Attach an optional handler
@@ -24,7 +25,7 @@ const Step4 = () => {
                 <Card.Body>
                   <ListGroup variant="flush">
                     <ListGroup.Item>
-                      <FiMapPin className="icon" /> Location: New York City
+                      <FiMapPin className="icon" /> Location: {item.address || "New York City"}
                     </ListGroup.Item>
                     <ListGroup.Item>
                       <FiClock className="icon" /> Duration: 48 hours
