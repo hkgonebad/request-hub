@@ -1,6 +1,6 @@
 import { SubBusinessUnit } from "@/models/interfaces";
 import { Col, Form, Row, Stack } from "react-bootstrap";
-import { FiEdit2, FiMail, FiPhone, FiTrash2, FiUploadCloud, FiUser, FiXCircle } from "react-icons/fi";
+import { FiEdit2, FiTrash2, FiUploadCloud, FiUser, FiXCircle, FiMapPin, FiCalendar, FiClock, FiShield, FiAlertTriangle } from "react-icons/fi";
 import { useDropzone } from "react-dropzone";
 import { useState } from "react";
 
@@ -32,18 +32,18 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
             </button>
           </Stack>
 
-          {/* Client Detail Info */}
+          {/* Mission Detail Info */}
           <div className="cdInfo">
             <div className="cdiBox cdiLogo">
               <img src={clientDetails?.img} alt="" />
             </div>
             <div className="cdiBox ">
               <i className="cdiIcon">
-                <FiUser className="icon" />
+                <FiShield className="icon" />
               </i>
               <h3>
-                <span>User Type</span>
-                {clientDetails?.type}
+                <span>Mission Type</span>
+                {clientDetails?.type || "Combat"}
               </h3>
             </div>
             <div className="cdiBox ">
@@ -51,26 +51,44 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
                 <FiUser className="icon" />
               </i>
               <h3>
-                <span>Customer ID</span>
-                {clientDetails?.id}
+                <span>Mission ID</span>
+                {clientDetails?.id || "M-2024-0422"}
               </h3>
             </div>
             <div className="cdiBox ">
               <i className="cdiIcon">
-                <FiPhone className="icon" />
+                <FiAlertTriangle className="icon" />
               </i>
               <h3>
-                <span>Contact Number</span>
-                {clientDetails?.mobile}
+                <span>Threat Level</span>
+                {clientDetails?.mobile || "Level 3 - Major Threat"}
               </h3>
             </div>
             <div className="cdiBox ">
               <i className="cdiIcon">
-                <FiMail className="icon" />
+                <FiMapPin className="icon" />
               </i>
               <h3>
-                <span>Address</span>
-                {clientDetails?.address}
+                <span>Location</span>
+                {clientDetails?.address || "New York City"}
+              </h3>
+            </div>
+            <div className="cdiBox ">
+              <i className="cdiIcon">
+                <FiCalendar className="icon" />
+              </i>
+              <h3>
+                <span>Launch Date</span>
+                {clientDetails?.address || "April 22, 2024"}
+              </h3>
+            </div>
+            <div className="cdiBox ">
+              <i className="cdiIcon">
+                <FiClock className="icon" />
+              </i>
+              <h3>
+                <span>Estimated Duration</span>
+                {clientDetails?.address || "48 hours"}
               </h3>
             </div>
           </div>
@@ -80,37 +98,38 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
           {/* Actions */}
           <Stack className="cdAction ms-auto justify-content-end" direction="horizontal">
             <button className="btn btn-link text-success">
-              Edit Form <FiEdit2 className="icon" />
+              Edit Mission <FiEdit2 className="icon" />
             </button>
             <button className="btn btn-link text-danger">
-              Delete Form <FiTrash2 className="icon" />
+              Cancel Mission <FiTrash2 className="icon" />
             </button>
           </Stack>
 
-          {/* Client Detail Form */}
+          {/* Mission Detail Form */}
           <div className="cdForm">
             <Form>
               <Row className="form-row">
                 <Form.Group className="mb-3" as={Col} controlId="cdName">
-                  <Form.Control type="text" placeholder="Customer Name" />
+                  <Form.Control type="text" placeholder="Mission Name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" as={Col} controlId="cdAccess">
                   <Form.Select name="" className="form-select">
-                    <option value="">Rights you want to access</option>
-                    <option value="one">One</option>
-                    <option value="two">Two</option>
-                    <option value="three">Three</option>
+                    <option value="">Mission Priority</option>
+                    <option value="one">Low</option>
+                    <option value="two">Medium</option>
+                    <option value="three">High</option>
+                    <option value="four">Critical</option>
                   </Form.Select>
                 </Form.Group>
               </Row>
 
               <Form.Group className="mb-3" controlId="cdComments">
-                <Form.Control as="textarea" rows={6} placeholder="Customer Comments" />
+                <Form.Control as="textarea" rows={6} placeholder="Mission Objectives and Details" />
               </Form.Group>
 
               {/* Dropzone */}
-              <h4>Upload and attach Evidence</h4>
+              <h4>Upload Mission Evidence and Intelligence</h4>
               <Form.Group controlId="cdUpload" {...getRootProps({ className: "dropzone mb-3" })}>
                 <input className="" {...getInputProps()} />
                 <FiUploadCloud className="icon" />
@@ -131,7 +150,7 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
               </Form.Group>
 
               <button type="submit" className="btn btn-primary">
-                Submit
+                Launch Mission
               </button>
             </Form>
           </div>
