@@ -78,8 +78,8 @@ const Step3 = () => {
 
                 {/* Add Resource */}
                 <InputGroup className="mb-3">
-                  <Form.Control onClick={(e) => e.currentTarget.select()} placeholder="Add New Resource" id="cnInput" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-                  <Button variant="primary" id="cnNotification" onClick={addResource}>
+                  <Form.Control onClick={(e) => e.currentTarget.select()} placeholder="Add New Resource" id="resourceInput" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                  <Button variant="primary" id="addResourceBtn" onClick={addResource}>
                     Add
                   </Button>
                 </InputGroup>
@@ -95,13 +95,13 @@ const Step3 = () => {
           <Offcanvas.Title>Resource Details</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Form.Group className="mb-3">
-            <Form.Label>Resource Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter resource name" />
+          <Form.Group className="mb-3" controlId="resourceName">
+            <Form.Label htmlFor="resourceName">Resource Name</Form.Label>
+            <Form.Control id="resourceName" type="text" placeholder="Enter resource name" />
           </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Resource Description</Form.Label>
-            <ReactQuill theme="snow" />
+          <Form.Group className="mb-3" controlId="resourceDescription">
+            <Form.Label htmlFor="resourceDescription">Resource Description</Form.Label>
+            <ReactQuill id="resourceDescription" theme="snow" />
           </Form.Group>
           <Form.Group className="mb-3 text-end">
             <button className="btn btn-primary">Save</button>

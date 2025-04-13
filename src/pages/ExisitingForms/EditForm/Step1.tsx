@@ -25,20 +25,20 @@ const Step1 = () => {
             <Stack className="wzItem" direction="horizontal" gap={2}>
               <FiMove className="icon dragIcon" />
               <span>1</span>
-              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="wzForm1">
-                <label htmlFor="" className="me-auto">
+              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="missionType">
+                <label htmlFor="missionType" className="me-auto">
                   Mission Type
                 </label>
-                <input type="radio" className="btn-check" name="options" id="option1" />
-                <label className="btn btn-info btn-check-toggle" htmlFor="option1">
+                <input type="radio" className="btn-check" name="missionType" id="missionTypeRescue" />
+                <label className="btn btn-info btn-check-toggle" htmlFor="missionTypeRescue">
                   Rescue
                 </label>
-                <input type="radio" className="btn-check" name="options" id="option2" />
-                <label className="btn btn-info btn-check-toggle" htmlFor="option2">
+                <input type="radio" className="btn-check" name="missionType" id="missionTypeCombat" />
+                <label className="btn btn-info btn-check-toggle" htmlFor="missionTypeCombat">
                   Combat
                 </label>
-                <input type="radio" className="btn-check" name="options" id="option3" />
-                <label className="btn btn-info btn-check-toggle" htmlFor="option3">
+                <input type="radio" className="btn-check" name="missionType" id="missionTypeIntelligence" />
+                <label className="btn btn-info btn-check-toggle" htmlFor="missionTypeIntelligence">
                   Intelligence
                 </label>
               </Form.Group>
@@ -58,11 +58,11 @@ const Step1 = () => {
             <Stack className="wzItem" direction="horizontal" gap={2}>
               <FiMove className="icon dragIcon" />
               <span>2</span>
-              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="wzForm2">
-                <label htmlFor="" className="me-auto">
+              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="threatLevel">
+                <label htmlFor="threatLevel" className="me-auto">
                   Threat Level
                 </label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select id="threatLevel" aria-label="Select threat level">
                   <option>Select Threat Level</option>
                   <option value="1">Level 1 - Minor Threat</option>
                   <option value="2">Level 2 - Moderate Threat</option>
@@ -87,11 +87,11 @@ const Step1 = () => {
             <Stack className="wzItem" direction="horizontal" gap={2}>
               <FiMove className="icon dragIcon" />
               <span>3</span>
-              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="wzForm3">
-                <label htmlFor="" className="me-auto">
+              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="missionLocation">
+                <label htmlFor="missionLocation" className="me-auto">
                   Mission Location
                 </label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select id="missionLocation" aria-label="Select mission location">
                   <option>Select Location</option>
                   <option value="1">New York City</option>
                   <option value="2">Los Angeles</option>
@@ -118,11 +118,11 @@ const Step1 = () => {
             <Stack className="wzItem" direction="horizontal" gap={2}>
               <FiMove className="icon dragIcon" />
               <span>4</span>
-              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="wzForm4">
-                <label htmlFor="" className="me-auto">
+              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="missionPriority">
+                <label htmlFor="missionPriority" className="me-auto">
                   Mission Priority
                 </label>
-                <Form.Select aria-label="Default select example">
+                <Form.Select id="missionPriority" aria-label="Select mission priority">
                   <option>Select Priority</option>
                   <option value="1">Low</option>
                   <option value="2">Medium</option>
@@ -146,11 +146,11 @@ const Step1 = () => {
             <Stack className="wzItem" direction="horizontal" gap={2}>
               <FiMove className="icon dragIcon" />
               <span>5</span>
-              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="wzForm5">
-                <label htmlFor="" className="me-auto">
+              <Form.Group className="d-flex align-items-center gap-2 form-group" controlId="missionDescription">
+                <label htmlFor="missionDescription" className="me-auto">
                   Mission Description
                 </label>
-                <Form.Control as="textarea" rows={3} placeholder="Enter mission details" />
+                <Form.Control id="missionDescription" as="textarea" rows={3} placeholder="Enter mission details" />
               </Form.Group>
 
               {/*  */}

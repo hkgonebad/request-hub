@@ -58,23 +58,23 @@ const Profile = () => {
                 <Form onSubmit={handleSubmit}>
                   <Stack gap={3}>
                     <Form.Group>
-                      <Form.Label>Full Name</Form.Label>
-                      <Form.Control type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} disabled={!isEditing} />
+                      <Form.Label htmlFor="name">Full Name</Form.Label>
+                      <Form.Control id="name" type="text" autoComplete="off" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} disabled={!isEditing} />
                     </Form.Group>
 
                     <Form.Group>
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} disabled={!isEditing} />
+                      <Form.Label htmlFor="email">Email</Form.Label>
+                      <Form.Control id="email" type="email" autoComplete="off" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} disabled={!isEditing} />
                     </Form.Group>
 
                     <Form.Group>
-                      <Form.Label>Role</Form.Label>
-                      <Form.Control type="text" value={formData.role} onChange={(e) => setFormData({ ...formData, role: e.target.value })} disabled={!isEditing} />
+                      <Form.Label htmlFor="role">Role</Form.Label>
+                      <Form.Control id="role" type="text" value={formData.role} onChange={(e) => setFormData({ ...formData, role: e.target.value })} disabled={!isEditing} />
                     </Form.Group>
 
                     <Form.Group>
-                      <Form.Label>Department</Form.Label>
-                      <Form.Control type="text" value={formData.department} onChange={(e) => setFormData({ ...formData, department: e.target.value })} disabled={!isEditing} />
+                      <Form.Label htmlFor="department">Department</Form.Label>
+                      <Form.Control id="department" type="text" value={formData.department} onChange={(e) => setFormData({ ...formData, department: e.target.value })} disabled={!isEditing} />
                     </Form.Group>
 
                     {isEditing && (

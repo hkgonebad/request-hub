@@ -4,6 +4,17 @@ import { FiCalendar, FiDownload, FiSearch, FiXCircle } from "react-icons/fi";
 import RequestsTable from "../Dashboard/ui/RequestsTable";
 
 const ReportsPage = () => {
+  // Event handlers for the cancel and download buttons
+  const handleCancel = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Add your cancel logic here
+  };
+
+  const handleDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Add your download logic here
+  };
+
   return (
     <>
       <section className="block pb-0">
@@ -17,32 +28,32 @@ const ReportsPage = () => {
 
             {/* Forms/Options */}
             <div className="bhForm bhForm-Multi">
-              <label htmlFor="" className="bhLabel">
+              <label htmlFor="appliedFilters" className="bhLabel">
                 Applied Filters
               </label>
               <div className="bhfCol">
                 <Form.Group controlId="wzForm1" className="form-inline">
                   <Form.Control className="" defaultValue="Request for Deletion" />
                 </Form.Group>
-                <a href="#!" className="cancel">
+                <a className="cancel" onClick={handleCancel} aria-label="Remove filter">
                   <FiXCircle className="icon" />
                 </a>
               </div>
               <div className="bhfCol">
                 <InputGroup className="">
-                  <Form.Control placeholder="This Month" />
+                  <Form.Control id="dateFilter" placeholder="This Month" />
                   <Button variant="outline">
                     <FiCalendar className="icon" />
                   </Button>
                 </InputGroup>
-                <a href="#!" className="cancel">
+                <a className="cancel" onClick={handleCancel} aria-label="Remove date filter">
                   <FiXCircle className="icon" />
                 </a>
               </div>
 
               <div className="bhfCol">
                 <InputGroup className="">
-                  <Form.Control placeholder="Search" />
+                  <Form.Control id="searchInput" placeholder="Search" />
                   <Button variant="outline">
                     <FiSearch className="icon" />
                   </Button>
@@ -50,9 +61,9 @@ const ReportsPage = () => {
               </div>
 
               <div className="bhfCol">
-                <a href="#!" className="btn btn-link">
+                <a className="btn btn-link" onClick={handleDownload}>
                   Download
-                  <FiDownload className="icon" />
+                  <FiDownload className="icon ms-2" />
                 </a>
               </div>
             </div>

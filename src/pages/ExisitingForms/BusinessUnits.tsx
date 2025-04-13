@@ -8,10 +8,13 @@ import { BusinessUnit, SubBusinessUnit } from "@/models/interfaces";
 import businessUnits from "@/pages/ExisitingForms/businessUnitsData";
 import ClientDetail from "@/pages/ExisitingForms/ui/ClientDetail";
 import EditForm from "@/pages/ExisitingForms/EditForm";
+import CreateUnitModal, { FormType, FormData } from "@/pages/ExisitingForms/ui/CreateUnitModal";
 
 const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | null) => void }) => {
   const [selectedItem, setSelectedItem] = useState<BusinessUnit | null>(null);
   const [selectedSubItem, setSelectedSubItem] = useState<SubBusinessUnit | null>(null);
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [formType, setFormType] = useState<FormType>(FormType.MISSION);
   const navigate = useNavigate();
   const { id } = useParams();
   const location = useLocation();
@@ -46,12 +49,33 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
     setSelectedSubItem(subItem);
   };
 
+  const handleOpenCreateModal = (type: FormType) => {
+    setFormType(type);
+    setShowCreateModal(true);
+  };
+
+  const handleCloseCreateModal = () => {
+    setShowCreateModal(false);
+  };
+
+  const handleCreateSubmit = (formData: FormData) => {
+    console.log("Form submitted:", formData);
+    // Add your form submission logic here
+  };
+
   return (
     <section className="block">
       <div className="container">
         {!selectedItem && (
           <>
-            <h3 className="section-title mb-4">Mission Categories</h3>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h3 className="section-title mb-0">Mission Categories</h3>
+              <div className="d-flex gap-2">
+                <button className="btn btn-primary" onClick={() => handleOpenCreateModal(FormType.MISSION)}>
+                  Create New Mission
+                </button>
+              </div>
+            </div>
             <Swiper
               spaceBetween={10}
               slidesPerView={1}
@@ -81,7 +105,14 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
 
         {selectedItem && !selectedSubItem && (
           <>
-            <h3 className="section-title mb-4">Mission Teams in {selectedItem.name}</h3>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h3 className="section-title mb-0">Mission Teams in {selectedItem.name}</h3>
+              <div className="d-flex gap-2">
+                <button className="btn btn-success" onClick={() => handleOpenCreateModal(FormType.TEAM)}>
+                  Create New Team
+                </button>
+              </div>
+            </div>
             <Swiper
               spaceBetween={10}
               slidesPerView={1}
@@ -116,6 +147,9 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
             <EditForm item={selectedSubItem} />
           </>
         )}
+
+        {/* Create Unit Modal */}
+        <CreateUnitModal show={showCreateModal} onHide={handleCloseCreateModal} onSubmit={handleCreateSubmit} formType={formType} title={formType === FormType.MISSION ? "Create New Mission" : "Create New Team"} />
       </div>
     </section>
   );

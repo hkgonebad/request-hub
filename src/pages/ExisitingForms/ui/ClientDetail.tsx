@@ -109,12 +109,14 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
           <div className="cdForm">
             <Form>
               <Row className="form-row">
-                <Form.Group className="mb-3" as={Col} controlId="cdName">
-                  <Form.Control type="text" placeholder="Mission Name" />
+                <Form.Group className="mb-3" as={Col} controlId="missionName">
+                  <Form.Label htmlFor="missionName">Mission Name</Form.Label>
+                  <Form.Control id="missionName" type="text" placeholder="Mission Name" />
                 </Form.Group>
 
-                <Form.Group className="mb-3" as={Col} controlId="cdAccess">
-                  <Form.Select name="" className="form-select">
+                <Form.Group className="mb-3" as={Col} controlId="missionPriority">
+                  <Form.Label htmlFor="missionPriority">Mission Priority</Form.Label>
+                  <Form.Select id="missionPriority" name="missionPriority" className="form-select">
                     <option value="">Mission Priority</option>
                     <option value="one">Low</option>
                     <option value="two">Medium</option>
@@ -124,14 +126,15 @@ const ClientDetail = ({ clientDetails }: { clientDetails: SubBusinessUnit }) => 
                 </Form.Group>
               </Row>
 
-              <Form.Group className="mb-3" controlId="cdComments">
-                <Form.Control as="textarea" rows={6} placeholder="Mission Objectives and Details" />
+              <Form.Group className="mb-3" controlId="missionComments">
+                <Form.Label htmlFor="missionComments">Mission Objectives and Details</Form.Label>
+                <Form.Control id="missionComments" as="textarea" rows={6} placeholder="Mission Objectives and Details" />
               </Form.Group>
 
               {/* Dropzone */}
               <h4>Upload Mission Evidence and Intelligence</h4>
-              <Form.Group controlId="cdUpload" {...getRootProps({ className: "dropzone mb-3" })}>
-                <input className="" {...getInputProps()} />
+              <Form.Group controlId="missionUpload" {...getRootProps({ className: "dropzone mb-3" })}>
+                <input id="missionUpload" {...getInputProps()} />
                 <FiUploadCloud className="icon" />
                 <p>
                   <span className="text-primary">Click to Upload</span> or Drag and Drop the file

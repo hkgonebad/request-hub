@@ -15,25 +15,25 @@ const Menu: React.FC = () => {
           <Nav className="justify-content-center" activeKey="/home">
             <NavDropdown title="Mission Control" id="basic-nav-dropdown">
               <NavLink to="/home" className="dropdown-item">
-                Mission Dashboard
+                Dashboard
               </NavLink>
               <NavLink to="/dashboard" className="dropdown-item">
-                Request Analytics
+                Analytics
               </NavLink>
             </NavDropdown>
             <Nav.Item>
               <NavLink to="/existing-forms" className="nav-link">
-                Mission Forms
+                Missions
               </NavLink>
             </Nav.Item>
             <Nav.Item>
               <NavLink to="/requests" className="nav-link">
-                Mission Requests
+                Requests
               </NavLink>
             </Nav.Item>
             <Nav.Item>
               <NavLink to="/reports" className="nav-link">
-                Mission Reports
+                Reports
               </NavLink>
             </Nav.Item>
           </Nav>
