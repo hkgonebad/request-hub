@@ -1,3 +1,4 @@
+import user from "@/assets/img/user.jpg";
 import { create } from "zustand";
 import { generateSampleNotifications } from "@/utils/notificationUtils";
 
@@ -35,7 +36,7 @@ const useUserStore = create<UserState>((set) => ({
     email: "tony.stark@starkenterprises.com",
     role: "Genius",
     department: "Research and Development",
-    avatar: "src/assets/img/user.jpg",
+    avatar: user,
     lastActive: new Date(),
   },
   notifications: generateSampleNotifications(),
