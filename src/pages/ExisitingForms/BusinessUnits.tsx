@@ -20,11 +20,7 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
     const params = new URLSearchParams(location.search);
     const subItemName = params.get("sub");
 
-    const subItem = subItemName
-      ? businessUnits
-          .flatMap((unit) => unit.subBusinessUnits || [])
-          .find((subUnit) => encodeURIComponent(subUnit.name.replace(/\s+/g, "").toLowerCase()) === subItemName)
-      : null;
+    const subItem = subItemName ? businessUnits.flatMap((unit) => unit.subBusinessUnits || []).find((subUnit) => encodeURIComponent(subUnit.name.replace(/\s+/g, "").toLowerCase()) === subItemName) : null;
 
     setSelectedSubItem(subItem || null);
 
@@ -54,63 +50,69 @@ const BusinessUnits = ({ onSelectItem }: { onSelectItem: (item: BusinessUnit | n
     <section className="block">
       <div className="container">
         {!selectedItem && (
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-              1280: {
-                slidesPerView: 5,
-              },
-            }}
-          >
-            {businessUnits.map((item, index) => (
-              <SwiperSlide key={index}>
-                <DisplayCards items={item} onClick={() => handleItemClick(item)} isSelected={selectedItem === item} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <>
+            <h3 className="section-title mb-4">Mission Categories</h3>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+                1280: {
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {businessUnits.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <DisplayCards items={item} onClick={() => handleItemClick(item)} isSelected={selectedItem === item} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </>
         )}
 
         {selectedItem && !selectedSubItem && (
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={1}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-              1280: {
-                slidesPerView: 5,
-              },
-            }}
-          >
-            {(selectedItem?.subBusinessUnits || []).map((item, index) => (
-              <SwiperSlide key={index}>
-                <DisplayCards items={item} onClick={() => handleSubBusinessItemClick(item)} isSelected={false} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <>
+            <h3 className="section-title mb-4">Mission Teams in {selectedItem.name}</h3>
+            <Swiper
+              spaceBetween={10}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+                1280: {
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {(selectedItem?.subBusinessUnits || []).map((item, index) => (
+                <SwiperSlide key={index}>
+                  <DisplayCards items={item} onClick={() => handleSubBusinessItemClick(item)} isSelected={false} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </>
         )}
 
         {selectedSubItem && (
           <>
+            <h3 className="section-title mb-4">Mission Details: {selectedSubItem.name}</h3>
             <ClientDetail clientDetails={selectedSubItem} />
-
             <EditForm item={selectedSubItem} />
           </>
         )}
