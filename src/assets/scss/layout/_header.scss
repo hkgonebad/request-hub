@@ -170,7 +170,7 @@
 
                 .notification-item {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 10px;
 
                     &:not(:last-child) {
@@ -179,22 +179,43 @@
                     }
 
                     &:hover {
-                        background-color: #F8F9FA;
                         cursor: pointer;
                     }
 
-                    p {
-                        // add line clamp of 2 lines
-                        display: -webkit-box;
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-
-                        font-size: .875rem;
-                        font-weight: 400;
-                        height: 47px;
-                        margin-bottom: 0px;
+                    .niDetail {
                         padding: 0px 6px;
+
+                        p {
+                            // add line clamp of 2 lines
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+
+                            font-size: .875rem;
+                            font-weight: 400;
+                            margin-bottom: 0px;
+                            line-height: 1.2;
+                        }
+
+                        small {
+                            font-size: .65rem;
+                            font-weight: 400;
+                            color: #6C757D;
+                        }
+                    }
+
+                    .btn {
+                        padding: 0px 6px;
+                        font-size: .65rem;
+                        font-weight: 400;
+                        color: $danger;
+                        white-space: nowrap;
+
+
+                        &:hover {
+                            background-color: #F8F9FA;
+                        }
                     }
                 }
             }
@@ -207,7 +228,11 @@
                 width: 40px;
                 overflow: hidden;
 
-                img {}
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
 
             .dropdown-menu {

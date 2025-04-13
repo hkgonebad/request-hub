@@ -1,5 +1,6 @@
 import { Dropdown, Stack } from "react-bootstrap";
 import logo from "@/assets/img/logo.webp";
+import user from "@/assets/img/user.jpg";
 import { FiBell } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import Menu from "./Menu";
@@ -47,8 +48,10 @@ const Header = () => {
                 ) : (
                   notifications.map((notification) => (
                     <div key={notification.id} className={`notification-item ${notification.read ? "read" : "unread"}`}>
-                      <p>{notification.message}</p>
-                      <small className="text-muted">{format(notification.timestamp, "PPp")}</small>
+                      <div className="niDetail">
+                        <p>{notification.message}</p>
+                        <small className="text-muted">{format(notification.timestamp, "PPp")}</small>
+                      </div>
                       {!notification.read && (
                         <button className="btn btn-link btn-sm" onClick={() => handleMarkAsRead(notification.id)}>
                           Mark as Read
@@ -63,7 +66,7 @@ const Header = () => {
             {/* Profile Dropdown */}
             <Dropdown className="profile">
               <Dropdown.Toggle bsPrefix="noBtn" id="profile" variant="none">
-                <img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" alt="Profile" />
+                <img src={user} alt="Profile" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end">
