@@ -1,4 +1,4 @@
-# RequestHub - Mission Management Platform
+# ReQuestHub - Mission Management Platform
 
 ![RequestHub Logo](src/assets/img/logos/avengers.png)
 
@@ -23,7 +23,7 @@ Remember, with great power comes great responsibility... and a well-organized mi
 
 ## 🚀 Project Overview
 
-RequestHub is a modern, front-end mission management platform built with React and TypeScript. While themed around the Marvel universe, it demonstrates enterprise application capabilities including complex state management, role-based access control, and responsive design patterns.
+reQuestHub is a modern, front-end mission management platform built with React and TypeScript. While themed around the Marvel universe, it demonstrates enterprise application capabilities including complex state management, role-based access control, and responsive design patterns.
 
 ## 🛠️ Technical Stack
 
@@ -97,7 +97,7 @@ Visit our live demo at: [https://hkgonebad.github.io/request-hub/](https://hkgon
 
 ## 🤝 Contributing
 
-We welcome contributions to RequestHub! Whether you want to add new features, fix bugs, or improve documentation, your help is appreciated.
+We welcome contributions to reQuestHub! Whether you want to add new features, fix bugs, or improve documentation, your help is appreciated.
 
 ### How to Contribute
 
